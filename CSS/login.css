@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    /*把高亮颜色设置为透明，也可以使用rgba的形式*/
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.ttf?t=1664767369142') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 登录区域背景颜色 */
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url(../Images/background.jpg) no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+
+/* 登录板块外框 */
+
+section {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    top: 80px;
+}
+
+
+/* 登录左侧部分start */
+
+section .login_left {
+    position: absolute;
+    width: 473px;
+    height: 499px;
+    top: 40px;
+    left: 120px;
+    border-radius: 74px;
+    background-color: #fff;
+    box-shadow: 5px 5px 6px rgb(0 0 0 / 25%);
+    z-index: 1;
+}
+
+
+/* 登录大标题 */
+
+section .login_left .title {
+    width: 87px;
+    height: 45px;
+    margin: 40px 0 0 60px;
+}
+
+section .login_left .title span {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+/* 登录账号,密码共同部分 */
+
+section .login_left .account,
+section .login_left .password {
+    position: relative;
+    width: 406px;
+    height: 70px;
+    margin: 30px auto;
+    border-radius: 24px;
+    background-color: #DDE7F4;
+}
+
+
+/*  登录账号,密码共同部分输入框 */
+
+section .login_left .input_account,
+section .login_left .input,
+section .login_left .input_password {
+    position: absolute;
+    width: 352px;
+    height: 70px;
+    padding: 3px 2px 3px 2px;
+    font-size: 28px;
+    color: #7F7F7F;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    top: 0;
+    left: 24px;
+}
+
+
+/* 密码输入框 */
+
+section .login_left .input_password {
+    display: none;
+    width: 320px;
+    top: 0;
+    z-index: 1;
+}
+
+
+/* 去除密码输入框的眼睛 */
+
+section .login_left .input_password::-ms-reveal {
+    display: none;
+}
+
+
+/* 登录密码 右侧眼睛*/
+
+section .login_left .password .input_off {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 23px;
+    right: 24px;
+    cursor: pointer;
+    background: url(../Images/input-off.png) no-repeat 0 8px;
+    background-size: contain;
+}
+
+
+/* 登录密码 右侧眼睛*/
+
+section .login_left .password .input_look {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 23px;
+    right: 24px;
+    cursor: pointer;
+    background: url(../Images/input-look.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+
+/* 用户管理协议等相关文字 */
+
+section .login_left p {
+    width: 350px;
+    color: #7F7F7F;
+    text-align: left;
+    margin: 0 auto;
+}
+
+
+/* 登录提示 */
+
+section .login_left .loginTip {
+    width: 350px;
+    height: 20px;
+    margin: -30px auto 0;
+    font-size: 12px;
+    color: #bf0614;
+    line-height: 20px;
+}
+
+
+/* 关于登录 */
+
+section .login_left .aboutLogin {
+    width: 350px;
+    height: 30px;
+    margin: 10px auto 0;
+    color: #7F7F7F;
+}
+
+
+/* 关于登录 自动登录*/
+
+section .login_left .autoLogin {
+    float: left;
+    cursor: pointer;
+}
+
+
+/* 关于登录 忘记密码*/
+
+section .login_left .forgetPassword {
+    float: right;
+    cursor: pointer;
+}
+
+
+/* 确认登录按钮 */
+
+section .login_left .btn_login {
+    width: 295px;
+    height: 64px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 45px;
+    background-color: rgba(68, 147, 188, 1);
+    border: 7px solid rgba(28, 147, 188, 1);
+    box-shadow: 2px 3px 5px rgb(52 51 51 / 48%);
+    cursor: pointer;
+}
+
+
+/* 确认登录按钮 点击变化*/
+
+section .login_left .btn_login:active {
+    top: 3px;
+    transition: all .3s cubic-bezier(.31, 3.4, .29, -.15);
+    box-shadow: 4px 4px 5px rgb(51 51 51 / 48%);
+}
+
+
+/* 确认登录按钮 文字 */
+
+section .login_left .btn_login span {
+    font-size: 35px;
+    color: #FFFFFF;
+}
+
+
+/* 登录左侧部分end */
+
+
+/* 登录右侧部分start */
+
+section .login_right {
+    position: absolute;
+    width: 564px;
+    height: 569px;
+    top: 0;
+    right: 120px;
+    border-radius: 74px;
+    background-color: rgba(116, 190, 223, 1);
+    box-shadow: 5px 8px 6px rgb(0 0 0 / 22%);
+}
+
+
+/* 欢迎回来!大标题 */
+
+section .login_right h1 {
+    width: 300px;
+    height: 60px;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+/* 实线,虚线 */
+
+section .login_right .solid_line,
+section .login_right .dashed_line {
+    width: 235px;
+    height: 3px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+/* 登录右侧相关文字内容 */
+
+section .login_right p {
+    text-align: center;
+    margin: 5px auto;
+    font-size: 23px;
+    color: #FFFFFF;
+}
+
+
+/* 登录右侧 第一次注册文字 */
+
+section .login_right .first_account {
+    position: relative;
+    margin-top: 40px;
+}
+
+
+/* 登录右侧 第一次注册文字 向下图标 */
+
+section .login_right .first_account i {
+    position: absolute;
+    width: 26px;
+    height: 40px;
+    top: -2px;
+    font-size: 32px;
+    text-align: center;
+    transform: rotate(90deg);
+    animation: upsidedown 0.8s linear infinite alternate;
+}
+
+@keyframes upsidedown {
+    from {
+        top: -2px;
+    }
+    to {
+        top: 2px;
+    }
+}
+
+
+/* 注册账号按钮 */
+
+section .login_right .btn_regist {
+    width: 300px;
+    height: 120px;
+    line-height: 120px;
+    margin: -5px auto;
+}
+
+
+/* 注册账号按钮 */
+
+
+/* 注册账号按钮 文字效果*/
+
+section .login_right .btn_regist:active {
+    top: 3px;
+    transition: all .3s cubic-bezier(.31, 3.4, .29, -.15);
+}
+
+section .login_right .btn_regist a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+/* 注册账号按钮 文字外框图*/
+
+section .login_right .btn_regist a img {
+    position: absolute;
+    width: 300px;
+    height: 120px;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 注册账号按钮 文字形式*/
+
+section .login_right .btn_regist a span {
+    position: absolute;
+    width: 300px;
+    height: 130px;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    line-height: 120px;
+    color: #1C93BC;
+    z-index: 1;
+}
+
+
+/* 登录右侧部分end */

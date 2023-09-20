@@ -1,0 +1,48 @@
+body {
+    -webkit-tap-highlight-color: transparent;
+    /*把高亮颜色设置为透明，也可以使用rgba的形式*/
+}
+
+.toptitle {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    opacity: 0;
+}
+
+
+/* 左上角logo */
+
+.logoicon {
+    width: 200px;
+    height: 120px;
+}
+
+.toptitle .icon {
+    transform: translate(8px, 16px);
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.toptitle span {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 30px;
+    color: #555555;
+}
+
+.part2 .toptitle .icon {
+    background-image: url(../Images/u301.png);
+}
+
+.part3 .toptitle .icon {
+    background-image: url(../Images/u300.png);
+}
+
+.part4 .toptitle .icon {
+    background-image: url(../Images/u234.png);
+    /* transform: translateX(); */
+}

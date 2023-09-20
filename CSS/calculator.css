@@ -1,0 +1,532 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.ttf?t=1664767369142') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: rgba(191, 220, 255, 1);
+    border: none;
+    border-radius: 7px;
+}
+
+
+/* 中间区域 */
+
+section {
+    position: relative;
+    width: 1200px;
+    height: 2000px;
+    margin: 0 auto;
+}
+
+
+/* 头部区域 start*/
+
+.head {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    line-height: 90px;
+}
+
+.head span {
+    float: left;
+    color: #7F7F7F;
+    font-size: 25px;
+}
+
+.head span:nth-child(2) {
+    color: #FFFFFF;
+}
+
+
+/* 头部区域 end*/
+
+
+/* 共同header */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 62px;
+    padding-left: 20px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 65%);
+    line-height: 62px;
+    border: 2px solid rgba(108, 132, 231, 1);
+    border-radius: 7px;
+    background: linear-gradient(270deg, rgba(248, 245, 191, 1) 0%, rgba(240, 239, 140, 1) 100%);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+}
+
+
+/* 共同header 下划线 */
+
+header .underline {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* 共同header 下划线图片 */
+
+header .underline img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* BMI身体质量指数 start */
+
+.bodyMassIndex {
+    position: absolute;
+    width: 846px;
+    height: 967px;
+    top: 100px;
+    left: 0;
+    border-radius: 7px;
+    border-radius: 2px solid rgba(108, 132, 231, 1);
+    background-color: rgba(247, 249, 226, 1);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+}
+
+
+/* BMI头部  */
+
+.bodyMassIndex header {
+    font-size: 32px;
+}
+
+
+/* BMI介绍  */
+
+.bodyMassIndex .introduction {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+}
+
+
+/* BMI介绍  左侧图片*/
+
+.bodyMassIndex .introduction .img {
+    float: left;
+    width: 205px;
+    height: 170px;
+    padding: 1px 18.5px;
+    background-color: rgba(242, 215, 170, 1);
+    border-radius: 6px;
+    margin: 0 20px;
+}
+
+
+/* BMI介绍  左侧图片*/
+
+.bodyMassIndex .introduction .img img {
+    width: 168px;
+    height: 168px;
+}
+
+
+/* BMI介绍  右侧介绍*/
+
+.bodyMassIndex .introduction .intro_right {
+    float: left;
+    width: 573px;
+    height: 198px;
+}
+
+
+/* BMI介绍  右侧介绍文字*/
+
+.bodyMassIndex .introduction .intro_right p {
+    font-size: 22px;
+    color: #333333;
+}
+
+
+/* BMI介绍 计算器区域 */
+
+.bodyMassIndex .calculator {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    padding: 10px;
+}
+
+.bodyMassIndex .calculator .centerLine {
+    position: absolute;
+    width: 3px;
+    height: 210px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* BMI介绍 计算器区域 左右侧共同框*/
+
+.bodyMassIndex .calculator .left,
+.bodyMassIndex .calculator .right {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+
+/* BMI介绍 计算器区域 左侧性别，身高，体重 */
+
+.bodyMassIndex .calculator .left p,
+.bodyMassIndex .calculator .left .sex,
+.bodyMassIndex .calculator .left .height,
+.bodyMassIndex .calculator .left .weight {
+    width: 350px;
+    height: 30px;
+    margin: 5px auto;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+
+/* BMI介绍 计算器区域 左侧标题 */
+
+.bodyMassIndex .calculator .left p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+}
+
+
+/* BMI介绍 计算器区域 左侧span和input输入框*/
+
+.bodyMassIndex .calculator span,
+.bodyMassIndex .calculator .left input {
+    float: left;
+    margin: 0 5px;
+}
+
+.bodyMassIndex .calculator .left input {
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+
+/* BMI介绍 计算器区域 左侧性别*/
+
+.bodyMassIndex .calculator .left .sex .man,
+.bodyMassIndex .calculator .left .sex .woman {
+    float: left;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/* BMI介绍 计算器区域 左侧性别 复选框与性别图标*/
+
+.bodyMassIndex .calculator .left .sex .checkbox,
+.bodyMassIndex .calculator .left .sex .img {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin: 2px auto;
+}
+
+
+/* BMI介绍 计算器区域 左侧性别 复选框与性别图标图片*/
+
+.bodyMassIndex .calculator .left .sex img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* BMI介绍 计算器区域 左侧计算按钮 */
+
+.bodyMassIndex .calculator .btn_compute {
+    width: 140px;
+    height: 40px;
+    margin-left: 114px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(69, 188, 239, 1);
+    border: none;
+    border-radius: 5px;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 65%);
+    cursor: pointer;
+}
+
+
+/* BMI介绍 计算器区域 右侧 */
+
+.bodyMassIndex .calculator .right ul {
+    margin: 40px auto;
+    padding-left: 20px;
+}
+
+
+/* BMI介绍 计算器区域 右侧身体健康指数显示区 */
+
+.bodyMassIndex .calculator .right ul li {
+    width: 350px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+
+/* 成年人身体质量指数 */
+
+.bodyMassIndex .aboutBMI {
+    width: 100%;
+    height: 160px;
+    padding: 20px;
+}
+
+
+/* 成年人身体质量指数 表格 */
+
+.bodyMassIndex .aboutBMI table {
+    width: 600px;
+    height: 70px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #fff;
+}
+
+
+/* 成年人身体质量指数 小标题*/
+
+.bodyMassIndex .aboutBMI h3 {
+    text-align: center;
+}
+
+
+/* 更多资料来源以及提示 */
+
+.bodyMassIndex .more {
+    width: 100%;
+    height: 300px;
+    padding: 30px;
+}
+
+
+/* 更多资料来源以及提示 资料来源*/
+
+.bodyMassIndex .more .source {
+    width: 100%;
+    height: 120px;
+}
+
+
+/* 更多资料来源以及提示 资料来源小标题*/
+
+.bodyMassIndex .more .source h2 {
+    height: 30px;
+    font-size: 25px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+
+/* 更多资料来源以及提示 资料来源 文章来源*/
+
+.bodyMassIndex .more .source li {
+    height: 25px;
+    font-size: 18px;
+    line-height: 18px;
+    padding-left: 30px;
+}
+
+
+/* 更多资料来源以及提示 资料来源 文章来源字体颜色*/
+
+.bodyMassIndex .more .source li a {
+    color: #333333;
+}
+
+
+/* 更多资料来源以及提示 Tips*/
+
+.bodyMassIndex .more .tips {
+    width: 100%;
+    height: 120px;
+}
+
+
+/* 更多资料来源以及提示 Tips小标题*/
+
+.bodyMassIndex .more .tips h2 {
+    height: 30px;
+    font-size: 25px;
+    color: #D9001B;
+    margin-bottom: 10px;
+}
+
+
+/* 更多资料来源以及提示 Tips文本内容*/
+
+.bodyMassIndex .more .tips p {
+    width: 600px;
+    padding: 0 30px;
+    font-size: 18px;
+    color: #333333;
+}
+
+
+/* 分割线 */
+
+.bodyMassIndex .line {
+    position: relative;
+    width: 90%;
+    height: 3px;
+    margin: 0 auto;
+}
+
+
+/* 分割线 图片*/
+
+.bodyMassIndex .line img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* BMI身体质量指数 end */
+
+
+/* 相关推荐 start */
+
+.recommend {
+    position: absolute;
+    width: 317px;
+    height: 366px;
+    top: 100px;
+    right: 0;
+    border-radius: 7px;
+    border-radius: 2px solid rgba(108, 132, 231, 1);
+    background-color: rgba(247, 249, 226, 1);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+}
+
+
+/* 相关推荐 头部 */
+
+.recommend .header {
+    font-size: 18px;
+}
+
+
+/* 相关推荐 内容 */
+
+.recommend ul {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.recommend ul li {
+    position: absolute;
+    float: left;
+    width: 140px;
+    height: 140px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.recommend ul li:nth-child(1) {
+    top: 5px;
+    left: 5px;
+    background-color: rgb(217, 57, 57);
+}
+
+.recommend ul li:nth-child(2) {
+    top: 5px;
+    right: 5px;
+    background-color: rgb(137, 217, 57);
+}
+
+.recommend ul li:nth-child(3) {
+    bottom: 5px;
+    left: 5px;
+    background-color: rgb(22, 220, 220);
+}
+
+.recommend ul li:nth-child(4) {
+    bottom: 5px;
+    right: 5px;
+    background-color: rgb(57, 81, 217);
+}
+
+
+/* 相关推荐 end */
+
+
+/* 文章资讯 start */
+
+.articleInformation {
+    position: absolute;
+    width: 317px;
+    height: 521px;
+    top: 500px;
+    right: 0;
+    border-radius: 7px;
+    border-radius: 2px solid rgba(108, 132, 231, 1);
+    background-color: rgba(247, 249, 226, 1);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+}
+
+.articleInformation .header {
+    font-size: 18px;
+}
+
+.articleInformation ul {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.articleInformation ul li {
+    width: 280px;
+    height: 80px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+
+/* 文章资讯 end */

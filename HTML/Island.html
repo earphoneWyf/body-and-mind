@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心灵岛</title>
+    <link rel="stylesheet" href="../CSS/Island.css">
+    <script src="../JavaScript/common.js"></script>
+    <script src="../JavaScript/Island.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <audio class="islandAudio" src="../audio/seaAudio.mp3" autoplay="autoplay" controls="controls" loop="loop" preload="auto"></audio>
+        <div class="seaAudio"><img src="../Images/play.png" alt="播放"></div>
+        <!-- 右上角人物点击展开start -->
+        <div class="scroll">
+            <!-- 小人物 -->
+            <div class="scroll_man"></div>
+            <!-- 卷轴 -->
+            <div class="scroll_paper">
+                <div class="paper">
+                    <p><i></i><span>关注:&nbsp;&nbsp;</span><span class="concernCount"></span></p>
+                    <p><i></i><span>漂流记录:&nbsp;&nbsp;</span><span class="floatCount">点击查看</span></p>
+                </div>
+                <div class="area">
+                    <div class="backToFront"></div>
+                    <div class="islandArea">
+                        <ul></ul>
+                        <div class="btnSet">
+                            <span class="btnLeft"></span><span class="btnRight"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右上角人物点击展开end -->
+
+        <!-- 返回上一页 -->
+        <div class="backTo">
+            <a href="../HTML/index.html"><img src="../Images/back.png" alt="返回按钮"></a>
+        </div>
+        <!-- 建岛区域start -->
+        <div class="buildIsland">
+            <div class="buildTip"><span>点击即可轻松创建你的专属小岛</span></div>
+            <!-- 关于建岛细节 start -->
+            <div class="aboutBuild">
+                <div class="islandCase">
+                    <!-- 选择岛的图片 -->
+                    <div class="islandImg">
+                        <div class="picture"></div>
+                        <div class="pictureTip"></div>
+                    </div>
+                    <!-- 岛名 -->
+                    <div class="islandName">
+                        <span>岛名：</span>
+                        <div class="inputCase"><input type="text" value="为你的岛取个响亮的名字"></div>
+                    </div>
+                    <!-- 岛的简介 -->
+                    <div class="briefIntroduction">
+                        <span>简介：</span>
+                        <div class="inputCase"><input type="text" value="简单介绍下你的小岛"></div>
+                    </div>
+                    <!-- 岛的类型 -->
+                    <div class="islandType">
+                        <span>类型：</span>
+                        <div class="chooseType">
+                            <div class="public checkbox">
+                                <div class="img"><img src="../Images/checkbox_selected.svg" alt="公开复选框"></div> 公开
+                            </div>
+                            <div class="private checkbox">
+                                <div class="img"><img src="../Images/checkbox_none.svg" alt="私密复选框"></div> 私密
+                            </div>
+                        </div>
+                    </div>
+                    <div class="finishBuild"></div>
+                    <p>完成即表示同意<a href="javascript:;">《用户管理协议》</a></p>
+                </div>
+            </div>
+            <!-- 关于建岛细节 end -->
+        </div>
+        <!-- 建岛区域 end -->
+
+
+        <!-- 专属岛start -->
+        <div class="exclusiveIsland"></div>
+        <!-- 专属岛end -->
+
+        <!-- 中心岛 -->
+        <div class=" centerIsland">
+            <a href="../HTML/publicIsland.html"></a>
+        </div>
+        <div class="island island_one"><img src="../Images/岛一.png" alt="岛一"></div>
+        <div class="island island_two"><img src="../Images/岛二.png" alt="岛二"></div>
+        <div class="island island_three"><img src="../Images/岛三.png" alt="岛三"></div>
+        <div class="island island_four"><img src="../Images/岛四.png" alt="岛四"></div>
+        <div class="island island_five"><img src="../Images/岛五.png" alt="岛五"></div>
+        <!-- 漂流小船 -->
+        <div class="boat">
+            <div class="random">随机漂流</div>
+        </div>
+    </div>
+    <!-- 加载页面 -->
+    <div class="loading">
+        <div id="load">
+            <div>G</div>
+            <div>N</div>
+            <div>I</div>
+            <div>D</div>
+            <div>A</div>
+            <div>O</div>
+            <div>L</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

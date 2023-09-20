@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/animate.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../JavaScript/food.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="topNav">
+            <div id="navbarSupportedContent" class="navLeft">
+                <ul class="navbar-nav ml-auto">
+                    <!-- 小白块 -->
+                    <div class="hori-selector">
+                        <!-- <div class="left"></div><div class="right"></div> -->
+                    </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="javascript:void(0);"><i class="fas fa-tachometer-alt"></i>首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/exercise.html"><i class="far fa-address-book"></i>健身教程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/diet.html"><i class="far fa-clone"></i>食物数据库</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);"><i class="far fa-calendar-alt"></i>了解自己</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navRight">
+                <div class="clickbtn"><i class="iconfont"></i></div>
+                <div class="searchbox">
+                    <div class="search">
+                        <div class="option">
+                            <div class="optBtn"><span>全部分类</span><i class="iconfont">&#xe66b;</i></div>
+                            <div class="optBox">
+                                <ul class="optList">
+                                    <li><a href="#">全部分类</a></li>
+                                    <li><a href="#">健身</a></li>
+                                    <li><a href="#">饮食</a></li>
+                                    <li><a href="#">心理</a></li>
+                                    <li><a href="#">心灵岛</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="点击搜索" id="searInput">
+                        <div class="searchbtn"><a href="#"><i class="iconfont"></i></a></div>
+                    </div>
+                </div>
+                <div class="loginBox">
+                    <div class="photo">
+                        <a href="#"><img data-src="../Images/未登录头像.png"></a>
+
+                        <div class="dropnav">
+                            <div id="id">
+                                <p>未登录</p>
+                            </div>
+                            <div class="outBtn" id="logoff">
+                                <h3>退出登录</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="island">
+                        <a href="./Island.html" title="进入小岛"></a>
+                    </div>
+                    <!-- 链接到登录 -->
+                    <div class="login"><a href="../HTML/login.html">登录/注册</a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <div class="part1 curr">
+                <div class="wrap">
+                    <div class="boxes">
+                        <div class="box curr"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="part2">
+                <div class="wrap">
+                    <div class="inner">
+                        <div class="wrap">
+                            <div class="brief">
+                                <div class="imgBox">
+                                    <ul>
+                                        <li class="fadeIn"> <img src="../Images/教程专区.png" alt=""></li>
+                                        <li class="fadeOut"><img src="../Images/疑问专区.png" alt=""></li>
+                                        <li class="fadeOut"><img src="../Images/计划专区.png" alt=""></li>
+                                        <li class="fadeOut"><img src="../Images/了解自己.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <ul>
+                                    <li class="fadeIn">
+                                        <h2 class="title">教程专区</h2>
+                                        <span>Fitness  tutorials</span>
+                                        <p>你是否有过想减肥？想锻炼？想改善体态？想练就马甲线？等时候却发现相关教程视频太多，且分布在不同平台，需要不断切换，查找起来十分麻烦...</p>
+                                        <p>或许来身心小窝可以帮助你解决上述问题，收录涵盖健身运动的多个板块教程，花样丰富，归类整理，任君选择~</p>
+                                        <a href="../HTML/exercise.html">
+                                            <div class="btn">
+                                                <span>查看详情</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="fadeOut">
+                                        <h2 class="title">疑问专区</h2>
+                                        <span>Questions & Ansewers</span>
+                                        <p>健身小白想健身却不知道该怎么开始？有氧、无氧傻傻分不清？减重还只会盯着体重秤看？暴汗真的=暴瘦吗？.......</p>
+                                        <p> 有关运动的任何疑问或都将在小窝找到对应的解答，这是一个疑问互助、友善互动的专区，我们真诚期待着您的加入！</p>
+                                        <a href="../HTML/exercise.html">
+                                            <div class="btn">
+                                                <span>查看详情</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="fadeOut">
+                                        <h2 class="title">计划专区</h2>
+                                        <span>Plannig  Zone</span>
+                                        <p>运动健身总是没计划没目标？有计划但常因单打独斗没毅力坚持不下去？健身总是看不到正反馈？......</p>
+                                        <p>来这里轻轻松松添加计划，加入线上健身房，多人实时在线互动健身，监督陪伴让您更好的前行，希望给您带来新的收获~</p>
+                                        <a href="../HTML/exercise.html">
+                                            <div class="btn">
+                                                <span>查看详情</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="fadeOut">
+                                        <h2 class="title">了解自己</h2>
+                                        <span>Know yourself</span>
+                                        <p>关于运动关于健身，你真的足够了解你自己吗？关于自己的身体质量指数、体脂率、基础代谢率这些你都清楚吗？又有哪些指标哪些数据是健身前必须要知道的呢？</p>
+                                        <p>在这里，只需提供简单的基本信息，即可一键获得详细数据，助力您进一步了解自我，逐步逐步靠近您的健身目标~</p>
+                                        <a href="../HTML/exercise.html">
+                                            <div class="btn">
+                                                <span>查看详情</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <div class="dot">
+                                        <div class="active"></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <h1 class="in">海量教程、疑问解答、误区避雷...</h1>
+                        <h1 class="in">小窝希望借此给您带来运动方面不一样的体验</h1>
+                    </div>
+                </div>
+
+            </div>
+            <div class="part3">
+                <div class="wrap">
+                    <div class="inner">
+                        <div class="toptitle">
+                            <div class="logoicon">
+                                <div class="icon"></div><span>饮食</span>
+                            </div>
+
+                        </div>
+                        <div class="book">
+                            <div class="left">
+                                <ul class="tab">
+                                    <div class="click_block"></div>
+                                    <li><i class="icon"></i><span>食物数据库</span></li>
+                                    <li><i class="icon"></i><span>食物排行榜</span></li>
+                                    <li><i class="icon"></i><span>饮食百科书</span></li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <div class="btn">
+                                    <button id="left"></button>
+                                    <button id="right"></button>
+                                </div>
+                                <!-- 这部分数据待后端接口交互 -->
+                                <div class="content active">
+                                    <div class="page one_pages p1 page1">
+                                    </div>
+                                    <div class="page one_pages p2 page1">
+                                    </div>
+                                    <div class="page one_pages p3 page1">
+                                    </div>
+                                    <div class="page one_pages p3 page1"></div>
+                                </div>
+                                <div class="content con2">
+                                    <div class="Rpart">
+                                        <div class="rank" data-list1="1" data-list2="2" data-list3="6" data-type="0">
+                                            <a href="./foodInside.html">
+                                                <div class="info">
+                                                    <div class="title"><i class="icon"></i>
+                                                        <h4>低热量排行榜</h4>
+                                                    </div>
+                                                    <div class="suitable">
+                                                        <p>适用人群</p>
+                                                        <p>减肥人士、体重管理人士、肥胖症患者等</p>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li class="before" data-groupId="1">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">谷类及制品</h4>
+                                                    </li>
+                                                    <li class="curr" data-groupId="2">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">薯类淀粉及制品</h4>
+                                                    </li>
+                                                    <li class="next" data-groupId="6">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">水果类及制品</h4>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                        <div class="rank " data-list1="12" data-list2="10" data-list3="3" data-type="1">
+                                            <a href="./foodInside.html">
+                                                <div class="info">
+                                                    <div class="title"><i class="icon"></i>
+                                                        <h4>高蛋白排行榜</h4>
+                                                    </div>
+                                                    <div class="suitable">
+                                                        <p>适用人群</p>
+                                                        <p>减肥人士、体重管理人士、肥胖症患者等</p>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li class="before" data-groupId="12">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">鱼虾蟹贝类</h4>
+                                                    </li>
+                                                    <li class="curr" data-groupId="10">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">乳类及制品</h4>
+                                                    </li>
+                                                    <li class="next" data-groupId="3">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">干豆类及制品</h4>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                        <div class="rank" data-list1="4" data-list2="5" data-list3="6" data-type="2">
+                                            <a href="./foodInside.html">
+                                                <div class="info">
+                                                    <div class="title"><i class="icon"></i>
+                                                        <h4>高纤维排行榜</h4>
+                                                    </div>
+                                                    <div class="suitable">
+                                                        <p>适用人群</p>
+                                                        <p>减肥人士、体重管理人士、肥胖症患者等</p>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li class="before" data-groupId="4">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">蔬菜类及制品</h4>
+                                                    </li>
+                                                    <li class="curr" data-groupId="5">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">菌藻类</h4>
+                                                    </li>
+                                                    <li class="next" data-groupId="6">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">水果类及制品</h4>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                        <div class="rank" data-list1="10" data-list2="12" data-list3="9" data-type="3">
+                                            <a href="./foodInside.html">
+                                                <div class="info">
+                                                    <div class="title"><i class="icon"></i>
+                                                        <h4>高钙排行榜</h4>
+                                                    </div>
+                                                    <div class="suitable">
+                                                        <p>适用人群</p>
+                                                        <p>减肥人士、体重管理人士、肥胖症患者等</p>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li class="curr" data-groupId="12">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">鱼虾蟹贝类</h4>
+                                                    </li>
+                                                    <li class="before" data-groupId="10">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">乳类及制品</h4>
+                                                    </li>
+                                                    <li class="next" data-groupId="9">
+                                                        <div class="image"><img src="../Images/food/乳类及制品.jpg" alt=""></div>
+                                                        <h4 class="name">禽肉类及制品</h4>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- 饮食百科书 start-->
+                                <div class="content">
+                                    <div class="more">
+                                        <a href="../HTML/foodInside.html"></a>
+                                    </div>
+                                    <div class="flush"></div>
+                                    <!-- 主要内容 -->
+                                    <div class="mainContent">
+                                        <div class="topContent">
+                                            <h1>营养健康科普</h1>
+                                        </div>
+                                        <div class="bottomContent">
+                                            <h1>食品谣言知多少</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 饮食百科书 start-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part4">
+                <div class="wrap">
+                    <div class="inner">
+                        <div class="toptitle">
+                            <div class="logoicon">
+                                <div class="icon"></div><span>心理</span>
+                            </div>
+                            <div class="title">
+
+                            </div>
+                        </div>
+                        <h1><span>心灵岛</span>·mental health</h1>
+                        <div class="content">
+
+                            <div class="middle">
+
+                                <div class="island">
+                                    <!-- 链接岛页面 -->
+                                    <a href="../HTML/Island.html">
+                                        <img data-src="../Images/u445.svg" alt="">
+                                        <div class="tip">
+                                            <p>点击开启<br>一段疗愈之旅~</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div id='bubble_machine'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="menu_box">
+            <div class="menu_btn">
+                <div class="line_box">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <ul class="menu_list">
+                <li><a><span>健身</span><i class="icon"></i></a></li>
+                <li><a><span>饮食</span><i class="icon"></i></a></li>
+                <li><a><span>心理</span><i class="icon"></i></a></li>
+                <li><a><span>回到顶部</span><i class="icon"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../JavaScript/fun.js"></script>
+    <script src="../JavaScript/ajax.js"></script>
+    <script src="../JavaScript/fade.js"></script>
+    <script src="../JavaScript/index.js"></script>
+    <script src="../JavaScript/Indexlogin.js"></script>
+    <script src="../JavaScript/turnPage.js"></script>
+</body>
+
+</html>

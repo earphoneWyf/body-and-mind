@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+    <script src="../JavaScript/common.js"></script>
+    <script src="../JavaScript/regist.js"></script>
+</head>
+
+<body>
+    <!-- 注册背景图片 -->
+    <div class="background">
+        <!-- 登录板块start -->
+        <section>
+            <!-- 登录左侧部分start -->
+            <div class="regist_left">
+                <!-- 点击返回登录页面 -->
+                <div class="backToLogin">
+                    <a href="../HTML/login.html">
+                        <i class="iconfont">&#xe6b1;</i>
+                        <span>点击返回登录</span>
+                    </a>
+                </div>
+                <!-- 动态插图 -->
+                <div class="img"></div>
+            </div>
+            <!-- 登录左侧部分end -->
+            <!-- 登录右侧部分start -->
+            <div class="regist_right">
+                <p style="margin-top: 30px;">
+                    <span>STEP&nbsp;1 </span><span>选择你喜欢的账号头像</span>
+                </p>
+                <!-- 选择头像 -->
+                <div class="headshot_case">
+                    <!-- 左侧按钮 -->
+                    <div class="btn_left"><img src="../Images/btn.svg" alt="左侧按钮"></div>
+                    <!-- 右侧按钮 -->
+                    <div class="btn_right"><img src="../Images/btn.svg" alt="右侧按钮"></div>
+                    <!-- 选择图片区域 -->
+                    <div class="headshot">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    <span>STEP&nbsp;2 </span><span>请输入密码</span>
+                </p>
+                <!-- 输入密码 -->
+                <div class="password">
+                    <input type="text" value="密码">
+                    <input type="password" class="input_password">
+                    <i class="input_off"></i>
+                </div>
+                <p>
+                    <span>STEP&nbsp;3 </span><span>请再次输入确定密码</span><span class="passwordTip"></span>
+                </p>
+                <!-- 确定密码 -->
+                <div class="repeatPassword">
+                    <input type="text" value="请重复上面密码">
+                    <input type="password" class="input_password">
+                    <i class="input_off"></i>
+                </div>
+                <p>
+                    <span>STEP&nbsp;4 </span><span>最后一步完成注册</span>
+                </p>
+                <!-- 一键生成账号按钮 -->
+                <div class="generate_account"><a href="#"><span>一键生成账号</span></a></div>
+                <!-- 用户管理协议 -->
+                <p>
+                    <span class="agree">生成即表示同意</span><a href="javascript:;">《用户管理协议》</a>
+                </p>
+            </div>
+            <!-- 登录右侧部分end -->
+        </section>
+        <!-- 登录板块end-->
+    </div>
+
+</body>
+
+</html>

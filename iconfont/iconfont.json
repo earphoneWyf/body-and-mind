@@ -1,0 +1,44 @@
+{
+  "id": "3685148",
+  "name": "软设",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10168182",
+      "name": "arrow-right-2",
+      "font_class": "arrow-right-",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "910896",
+      "name": "arrowdown",
+      "font_class": "arrow",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
+      "icon_id": "248922",
+      "name": "select",
+      "font_class": "select",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "752992",
+      "name": "arrowDown",
+      "font_class": "arrowdown",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    },
+    {
+      "icon_id": "12865679",
+      "name": "radio button unselect",
+      "font_class": "radiobuttonunselect",
+      "unicode": "e6ed",
+      "unicode_decimal": 59117
+    }
+  ]
+}

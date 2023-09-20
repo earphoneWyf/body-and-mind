@@ -1,0 +1,1111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    /*把高亮颜色设置为透明，也可以使用rgba的形式*/
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.ttf?t=1664767369142') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(../Images/island_sea_bg.jpg) no-repeat 50% -100px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* 岛的背景 */
+
+.background {
+    position: relative;
+    width: 1536px;
+    /* height: 753px; */
+    height: 730px;
+    margin: 0 auto;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+}
+
+.background .seaAudio {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    transition: all 4s ease;
+    animation: rotateAudio 4s infinite linear;
+}
+
+.background .seaAudio img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rotateAudio {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* 右上角人物展开图start */
+
+.scroll {
+    position: absolute;
+    width: 75px;
+    height: 140px;
+    top: 0;
+    right: 0;
+}
+
+
+/* 右上角人物展开图 人物图 */
+
+.scroll .scroll_man {
+    position: absolute;
+    width: 92px;
+    height: 180px;
+    top: 0;
+    right: 0;
+    background: url(../Images/scroll_man.png) no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+
+/* 右上角人物展开图 卷轴外框 */
+
+.scroll .scroll_paper {
+    position: absolute;
+    width: 290px;
+    height: 125px;
+    bottom: -42px;
+    right: 23px;
+    overflow: hidden;
+}
+
+
+/* 右上角人物展开图 卷轴图*/
+
+.scroll .scroll_paper .paper {
+    position: absolute;
+    width: 290px;
+    height: 125px;
+    bottom: 0px;
+    right: -264px;
+    padding: 20px;
+    background: url(../Images/scroll_paper.png) no-repeat;
+    background-size: contain;
+    transition: all 0.6s ease;
+}
+
+
+/* 右上角人物展开图 卷轴图 p*/
+
+.scroll .scroll_paper .paper p {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 42px;
+}
+
+
+/* 右上角人物展开图 卷轴图 关注*/
+
+.scroll .scroll_paper .paper p:nth-child(1) i {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background: url(../Images/paper_concern.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 右上角人物展开图 卷轴图 漂流记录*/
+
+.scroll .scroll_paper .paper p:nth-child(2) i {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background: url(../Images/paper_record.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 右上角人物展开图 卷轴图 文字 */
+
+.scroll .scroll_paper .paper p span {
+    float: left;
+    height: 40px;
+    font-size: 18px;
+}
+
+.scroll .scroll_paper .paper p .concernCount,
+.scroll .scroll_paper .paper p .floatCount {
+    width: 72px;
+    height: 30px;
+    color: #7F7F7F;
+    cursor: pointer;
+}
+
+
+/* 右上角人物展开图 岛名，id */
+
+.scroll .scroll_paper .area {
+    display: none;
+    position: absolute;
+    width: 290px;
+    height: 125px;
+    bottom: 0px;
+    right: -10px;
+    padding: 20px;
+    background: url(../Images/scroll_paper.png) no-repeat;
+    background-size: contain;
+    transition: all 0.6s ease;
+}
+
+
+/* 点击返回关注数区域 */
+
+.scroll .scroll_paper .area .backToFront {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 24px;
+    left: 32px;
+    background: url(../Images/back.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 岛的相关信息 */
+
+.scroll .scroll_paper .area .islandArea {
+    position: absolute;
+    width: 260px;
+    height: 100px;
+    left: 52%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+
+/* 岛的相关信息 ul*/
+
+.scroll .scroll_paper .area .islandArea ul {
+    position: absolute;
+    width: 240px;
+    height: 70px;
+    left: 10px;
+    top: 0;
+}
+
+
+/* 岛的相关信息 li*/
+
+.scroll .scroll_paper .area .islandArea ul li {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 岛的相关信息 岛的id*/
+
+.scroll .scroll_paper .area .islandArea ul li .islandId {
+    float: left;
+    width: 80px;
+    height: 50%;
+    line-height: 35px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 65%);
+    cursor: pointer;
+}
+
+
+/* 岛的相关信息 岛名*/
+
+.scroll .scroll_paper .area .islandArea ul li .islandName {
+    float: left;
+    width: 160px;
+    height: 50%;
+    line-height: 35px;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*按钮集合 */
+
+.scroll .scroll_paper .area .islandArea .btnSet {
+    position: absolute;
+    width: 50px;
+    height: 24px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+
+/* 左侧按钮 */
+
+.scroll .scroll_paper .area .islandArea .btnSet .btnLeft {
+    float: left;
+    width: 24px;
+    height: 24px;
+    background: url(../Images/left.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 右侧按钮 */
+
+.scroll .scroll_paper .area .islandArea .btnSet .btnRight {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background: url(../Images/right.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 右上角人物展开图end */
+
+
+/* 返回上一页 */
+
+.backTo {
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-730px);
+}
+
+.backTo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 个人专属岛 */
+
+.exclusiveIsland {
+    display: none;
+    position: absolute;
+    width: 200px !important;
+    height: 200px !important;
+    top: 200px;
+    left: 210px;
+    background-size: contain;
+    z-index: 0;
+    animation: upsidedown 1.2s linear infinite alternate;
+}
+
+
+/* 个人专属岛 图片*/
+
+.exclusiveIsland img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* 个人专属岛 提示框*/
+
+.islandTips {
+    display: none;
+    position: absolute;
+    width: 210px;
+    height: 120px;
+    color: #333333;
+    padding: 12px 30px 25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: url(../Images/islandTip.png) no-repeat;
+    background-size: contain;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+
+/* 个人专属岛 提示框鼠标经过显示*/
+
+.exclusiveIsland:hover .islandTips {
+    display: block;
+}
+
+.exclusiveIsland .islandTips {
+    bottom: 105px;
+    right: -145px;
+}
+
+
+/* 随机岛1 提示框*/
+
+.island_one .islandTips {
+    bottom: 180px;
+    right: -100px;
+}
+
+
+/* 随机岛2 提示框*/
+
+.island_two .islandTips {
+    bottom: 100px;
+    right: -210px;
+}
+
+
+/* 随机岛3 提示框*/
+
+.island_three .islandTips {
+    bottom: 100px;
+    right: -140px;
+}
+
+
+/*随机岛4 提示框*/
+
+.island_four .islandTips {
+    bottom: 100px;
+    right: -100px;
+}
+
+
+/* 随机岛5 提示框*/
+
+.island_five .islandTips {
+    bottom: 100px;
+    right: -100px;
+}
+
+
+/*随机岛 提示框 岛名，简介，id*/
+
+.islandTips .ID,
+.islandTips .name,
+.islandTips .intro {
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+
+
+/* 个人专属岛 提示框 岛名，简介，id 名字*/
+
+.islandTips span:nth-child(1) {
+    position: absolute;
+    width: 36px;
+    height: 20px;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+
+/* 个人专属岛 提示框 岛名，简介，id 名字对应的值*/
+
+.islandTips span:nth-child(2) {
+    position: absolute;
+    width: 115px;
+    height: 20px;
+    top: 0;
+    left: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.island:hover .islandTips {
+    display: block;
+}
+
+
+/* 建岛模块 */
+
+.buildIsland {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    left: 270px;
+    background: url(../Images/building.png) no-repeat -40px;
+    background-size: cover;
+    z-index: 2;
+}
+
+
+/* 建岛提示 */
+
+.buildTip {
+    display: none;
+    position: absolute;
+    width: 155px;
+    height: 90px;
+    top: 22px;
+    right: -50px;
+    background: url(../Images/buildTip.png) no-repeat;
+    background-size: contain;
+}
+
+.buildTip span {
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    top: 12px;
+    left: 22px;
+    text-align: center;
+}
+
+.buildIsland:hover .buildTip {
+    display: block;
+}
+
+
+/* 中心岛 */
+
+.background .centerIsland {
+    position: absolute;
+    width: 555px;
+    height: 230px;
+    top: 52%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 20px);
+    background: url(../Images/centerIsland.svg) no-repeat;
+    background-size: contain;
+    animation: none !important;
+    cursor: pointer;
+}
+
+.background .centerIsland a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 关于建岛细节 start*/
+
+.aboutBuild {
+    visibility: hidden;
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    left: -100px;
+    top: 160px;
+    background: url(../Images/buildingCase.png) no-repeat center center;
+    background-size: cover;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+
+/* 关于建岛细节内盒子 */
+
+.aboutBuild .islandCase {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #333333;
+}
+
+
+/* 关于建岛 岛图 */
+
+.aboutBuild .islandImg {
+    position: absolute;
+    width: 104px;
+    height: 96px;
+    top: 48px;
+    left: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+/* 关于建岛 岛图 图片外框*/
+
+.aboutBuild .islandImg .picture {
+    position: absolute;
+    width: 104px;
+    height: 90px;
+    top: 0;
+    background-color: #fff;
+}
+
+
+/* 关于建岛 岛图 图片 */
+
+.aboutBuild .islandImg .picture img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* 关于建岛 岛图 提示点击换一张*/
+
+.aboutBuild .islandImg .pictureTip {
+    position: absolute;
+    width: 104px;
+    height: 20px;
+    bottom: 0;
+    background: url(../Images/changeAnother.png) no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+
+/* 关于建岛 岛名 */
+
+.aboutBuild .islandName {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 165px;
+    top: 48px;
+}
+
+
+/* 关于建岛 岛名文字*/
+
+.aboutBuild .islandName span {
+    width: 80px;
+    height: 30px;
+    font-size: 24px;
+}
+
+
+/* 关于建岛 岛名输入框外框*/
+
+.aboutBuild .islandName .inputCase {
+    width: 184px;
+    height: 32px;
+    padding: 3px 2px;
+    margin-top: 6px;
+    background: url(../Images/input1.svg) no-repeat;
+    background-size: contain;
+}
+
+
+/* 关于建岛 简介 */
+
+.aboutBuild .briefIntroduction {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 40px;
+    top: 150px;
+}
+
+
+/* 关于建岛 简介文字 */
+
+.aboutBuild .briefIntroduction span {
+    float: left;
+    width: 72px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+}
+
+
+/* 关于建岛 简介 右边输入框外框*/
+
+.aboutBuild .briefIntroduction .inputCase {
+    float: left;
+    width: 238px;
+    height: 80px;
+    padding: 3px 2px;
+    background: url(../Images/input2.svg) no-repeat;
+    background-size: contain;
+}
+
+
+/* 关于建岛 岛名，简介 右边输入框*/
+
+.aboutBuild .inputCase input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 12px;
+    letter-spacing: normal;
+    color: #7F7F7F;
+}
+
+
+/* 关于建岛 岛的类型 */
+
+.aboutBuild .islandType {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 40px;
+    top: 245px;
+    line-height: 30px;
+}
+
+
+/* 关于建岛 岛的类型文字*/
+
+.aboutBuild .islandType span {
+    float: left;
+    width: 72px;
+    height: 30px;
+    font-size: 24px;
+}
+
+
+/* 关于建岛 岛的类型 公开，私有 */
+
+.aboutBuild .islandType .public,
+.aboutBuild .islandType .private {
+    float: left;
+    width: 70px;
+    height: 30px;
+    line-height: 23px;
+    padding: 3.5px 0;
+    cursor: pointer;
+}
+
+
+/* 关于建岛 岛的类型 公开，私有复选按钮图片 */
+
+.aboutBuild .islandType .img {
+    float: left;
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+}
+
+
+/* 关于建岛 完成建岛按钮 */
+
+.aboutBuild .finishBuild {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    top: 282px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/finishBuilding.png) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 关于建岛 用户管理协议 */
+
+.aboutBuild p {
+    position: absolute;
+    width: 100%;
+    top: 340px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+
+
+/* 关于建岛细节 end*/
+
+
+/* 漂流小船 */
+
+.boat {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background: url(../Images/船.gif) no-repeat;
+    background-size: contain;
+}
+
+
+/* 漂流小船 鼠标经过小船按钮出现*/
+
+.boat:hover .random {
+    display: block;
+}
+
+
+/* 漂流小船 随机漂流按钮 */
+
+.boat .random {
+    display: none;
+    position: absolute;
+    float: left;
+    width: 80px;
+    height: 30px;
+    top: -20px;
+    left: 50%;
+    margin-left: -40px;
+    text-align: center;
+    line-height: 30px;
+    color: #FFFFFF;
+    background-color: rgb(144, 77, 77);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+/* 漂流小船 随机,手动漂流按钮小箭头 */
+
+.boat .random::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-135deg);
+    bottom: -5px;
+    border-left: 5px solid rgb(144, 77, 77);
+    border-top: 5px solid rgb(144, 77, 77);
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+
+/* 中心岛周围六岛屿 */
+
+.island {
+    position: absolute;
+    z-index: 1;
+    animation: upsidedown 1.2s linear infinite alternate;
+}
+
+
+/* 中心岛周围六岛屿1 */
+
+.background .island_one {
+    width: 320px;
+    height: 260px;
+    bottom: -50px;
+    left: 270px;
+}
+
+
+/* 中心岛周围六岛屿2 */
+
+.background .island_two {
+    width: 260px;
+    height: 245px;
+    bottom: 0;
+    right: 260px;
+}
+
+
+/* 中心岛周围六岛屿3 */
+
+.background .island_three {
+    width: 200px;
+    height: 150px;
+    top: 240px;
+    right: 320px;
+}
+
+
+/* 中心岛周围六岛屿4 */
+
+.background .island_four {
+    width: 260px;
+    height: 230px;
+    top: 300px;
+    right: 80px;
+}
+
+
+/* 中心岛周围六岛屿5 */
+
+.background .island_five {
+    width: 220px;
+    height: 300px;
+    top: 275px;
+    left: 40px;
+}
+
+
+/* 中心岛周围六岛屿 */
+
+
+/* 中心岛周围六岛屿 图片*/
+
+.background img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes upsidedown {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
+
+
+/* loading 加载页面start */
+
+.loading {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+#load {
+    position: absolute;
+    width: 800px;
+    height: 100px;
+    left: 50%;
+    top: 40%;
+    margin-left: -400px;
+    overflow: visible;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+#load div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    font-size: 70px;
+    margin: 5px;
+    text-align: center;
+    line-height: 80px;
+    opacity: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    animation: move 2s linear infinite;
+    -o-animation: move 2s linear infinite;
+    -moz-animation: move 2s linear infinite;
+    -webkit-animation: move 2s linear infinite;
+    transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    color: #35C4F0;
+}
+
+#load div:nth-child(2) {
+    animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+
+#load div:nth-child(3) {
+    animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+
+#load div:nth-child(4) {
+    animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+
+#load div:nth-child(5) {
+    animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+}
+
+#load div:nth-child(6) {
+    animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+#load div:nth-child(7) {
+    animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    35% {
+        left: 41%;
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    65% {
+        left: 59%;
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        -moz-transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    35% {
+        left: 41%;
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    65% {
+        left: 59%;
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        -moz-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    35% {
+        left: 41%;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    65% {
+        left: 59%;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes move {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    35% {
+        left: 41%;
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    65% {
+        left: 59%;
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+}
+
+
+/* loading 加载页面 end */

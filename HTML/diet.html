@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>饮食</title>
+    <link rel="stylesheet" href="../CSS/diet.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="tab">
+
+            <ul>
+            </ul>
+        </div>
+        <div class="contWrap">
+            <div class="content active cont1">
+                <h1>谷类及制品</h1>
+                <div class="searchBox">
+                    <input type="text" placeholder="搜索具体的食物数据信息" id="searchIpt">
+                    <div id="searchBtn"></div>
+                    <div class="drop"></div>
+                </div>
+                <div class="diet">
+                    <!-- 展开更多 -->
+                    <div class="list">
+                        <div class="diet-frame">
+                            <ul>
+                                <div class="list1">
+
+                                </div>
+                                <div class="list2">
+
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="btn">
+                            <button id="left"></button>
+                            <button id="right"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <h2 class="title">食物详情</h2>
+                    <div class="inner">
+                        <div class="left"><img src="" alt=""></div>
+                        <div class="right">
+                            <div class="name">
+                                <h3>名称 :</h3><span></span></div>
+                            <div class="heat">
+                                <h3>热量 :</h3><span> </span></div>
+                            <div class="classify">
+                                <h3>分类 :</h3><span></span></div>
+                        </div>
+                    </div>
+                    <h2 class="title">营养信息</h2>
+                    <div class="info">
+                        <div class="column1">
+                            <h4>项目</h4>
+                            <ul class="key">
+                                <li>
+                                    <p>能量<b>(千卡)</b></p>
+                                </li>
+                                <li>
+                                    <p>脂肪<b>(g)</b></p>
+                                </li>
+                                <li>
+                                    <p>蛋白质<b>(g)</b></p>
+                                </li>
+                                <li>
+                                    <p>碳水化合物<b>(g)</b></p>
+                                </li>
+                                <li>
+                                    <p>膳食纤维<b>(g)</b></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column2">
+                            <h4>含量 / <b>每[100g]可食部</b></h4>
+                            <ul id="value">
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clickBtn">
+            <img src="../Images/排行榜/0.png" alt="">
+            <ul>
+                <a href="../HTML/foodInside.html">
+                    <li><span>排行榜</span></li>
+                </a>
+                <a href="../HTML/foodInside.html">
+                    <li><span>百科书</span></li>
+                </a>
+                <a href="../HTML/index.html">
+                    <li><span>回到首页</span></li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <script src="../JavaScript/GETAJAX.js"></script>
+    <script src="../JavaScript/getData.js"></script>
+    <script src="../JavaScript/fun.js"></script>
+    <script src="../JavaScript/diet.js"></script>
+</body>
+
+</html>

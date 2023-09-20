@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心灵岛的内部</title>
+    <link rel="stylesheet" href="../CSS/insideIsland.css">
+    <script src="../JavaScript/common.js"></script>
+    <script src="../JavaScript/insideIsland.js"></script>
+    <script src="../JavaScript/record.js"></script>
+    <script src="../JavaScript/recordPublic.js"></script>
+
+</head>
+
+<body>
+    <div class="background">
+
+        <!-- 动态发布区域start -->
+        <section>
+            <div class="insideCase">
+                <div class="postUpdates">
+                    <!-- 左侧区域 -->
+                    <div class="post_left">
+                        <h1>发布动态</h1>
+                        <!-- 心情选择区start -->
+                        <div class="selectStatus">
+                            <div class="selectedImg"></div>
+                            <div class="ulCase">
+                                <ul></ul>
+                            </div>
+                            <div class="scroll_track">
+                                <div class="scroll_btn"><span></span></div>
+                            </div>
+                            <div class="btnLeft"></div>
+                            <div class="btnRight"></div>
+                        </div>
+                        <!-- 心情选择区end -->
+                        <!-- 选择是否公开 -->
+                        <div class="public_or_private">
+                            <span class="text">谁可以看</span>
+                            <div class="chooseArea">
+                                <div class="public select_type">
+                                    <div class="img"><img src="../Images/public.svg"></div>公开</div>
+                                <div class="private select_type">
+                                    <div class="img"><img src="../Images/private.svg"></div>私密</div>
+                            </div>
+                        </div>
+                        <!-- 选择是否允许评论 -->
+                        <div class="comment">
+                            <span class="text">准许评论</span>
+                            <div class="btn_select"><img src="../Images/btn_choose.png" alt="是否允许评论"></div>
+                        </div>
+                    </div>
+                    <!-- 右侧区域 -->
+                    <div class="post_right">
+                        <!-- 标题输入区 -->
+                        <div class="title_input"><input type="text" value="请输入标题"></div>
+                        <!-- 内容输入区 -->
+                        <div class="article">
+                            <textarea placeholder="请输入内容"></textarea>
+                        </div>
+                        <!-- 发布时间start  -->
+                        <div class="time">
+                            <span class="week"></span><span class="date"></span>
+                            <ul>
+                                <li class="year"></li>
+                                <li>年</li>
+                                <li class="month"></li>
+                                <li>月</li>
+                            </ul>
+                        </div>
+                        <!-- 发布时间end  -->
+                        <!-- 发布动态按钮 -->
+                        <div class="btn_post">发布</div>
+                    </div>
+                    <!-- 分割线 -->
+                    <div class="postStatus_line"></div>
+                    <!-- 关闭按钮 -->
+                    <div class="close"></div>
+                </div>
+            </div>
+        </section>
+        <!-- 动态发布区域end -->
+
+
+        <!-- 海螺之声 录音发布start -->
+        <div class="audio">
+            <div class="audioInsideCase">
+                <div class="audioInside">
+                    <!-- 关闭按钮 -->
+                    <div class="close"></div>
+                    <!-- 标题 -->
+                    <h1>海螺之声</h1>
+                    <div class="audioContent">
+                        <!-- 简单介绍 -->
+                        <div class="intro">
+                            <p>这是一个可以记录声音的神奇海螺</p>
+                            <p>放入你的声音</p>
+                            <p>说出你的故事/烦恼/心声</p>
+                            <p>将会被有缘人拾起~</p>
+                            <p>被倾听被看见</p>
+                        </div>
+                        <!-- 添加发布录音区域 -->
+                        <div class="audioPublic">
+                            <div class="audioTips"></div>
+                            <div class="circleOne"></div>
+                            <div class="circleTwo"></div>
+                            <div class="circleThree">
+                                <span class="recordTip">嗨，想说点什么？</span>
+                                <!-- 录制中 -->
+                                <div class="recording">
+                                    <!-- 显示录音中 -->
+                                    <div class="btn_record"><img src="../Images/btn_audio.png"></div>
+                                    <!-- 正在录制 -->
+                                    <div class="text_record">点击录音</div>
+                                    <!-- 录制计时 -->
+                                    <div class="time_record"><span>0</span><span>s</span></div>
+                                    <!-- 完成录制 -->
+                                    <div class="finish_record"></div>
+                                </div>
+                                <!-- 预览录制效果区 -->
+                                <div class="preview">
+                                    <div class="play_audio"></div>
+                                    <audio controls autoplay></audio>
+                                    <div class="cancle_audio"></div>
+                                </div>
+                            </div>
+                            <div class="addAudio">点击添加语音</div>
+
+                        </div>
+                        <!-- 发布时间start  -->
+                        <div class="time">
+                            <span class="week"></span><span class="date"></span>
+                            <ul>
+                                <li class="year"></li>
+                                <li>年</li>
+                                <li class="month"></li>
+                                <li>月</li>
+                            </ul>
+                        </div>
+                        <div class="putOnTheBeach">放到海滩</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 海螺之声 录音发布end -->
+
+
+        <div class="centerArea">
+            <!-- 返回上一页 -->
+            <div class="backTo">
+                <a href="../HTML/Island.html"><img src="../Images/backSign.png" alt="返回按钮"></a>
+            </div>
+            <!-- 心灵岛图片 -->
+            <div class="img islandImg"></div>
+            <!-- 海螺1 -->
+            <div class="conch conchOne">
+                <div class="pic"></div>
+                <div class="bubbles">
+                    <audio></audio>
+                    <div class="bubblesAudio"><img src="../Images/action.png" alt="播放音频"></div>
+                </div>
+            </div>
+            <!-- 海螺2 -->
+            <div class="conch conchTwo">
+                <div class="pic"></div>
+                <div class="bubbles">
+                    <audio></audio>
+                    <div class="bubblesAudio"><img src="../Images/action.png" alt="播放音频"></div>
+                </div>
+            </div>
+            <!-- 海螺3 -->
+            <div class="conch conchThree">
+                <div class="pic"></div>
+                <div class="bubbles">
+                    <audio></audio>
+                    <div class="bubblesAudio"><img src="../Images/action.png" alt="播放音频"></div>
+                </div>
+            </div>
+            <!-- 海螺4 -->
+            <div class="conch conchFour">
+                <div class="pic"></div>
+                <div class="bubbles">
+                    <audio></audio>
+                    <div class="bubblesAudio"><img src="../Images/action.png" alt="播放音频"></div>
+                </div>
+            </div>
+
+
+            <!-- 心灵岛头部相关信息start -->
+            <div class="islandMessage">
+                <div class="detail">
+                    <!-- 岛的动态 -->
+                    <div class="islandTrends">
+                        <!-- 置顶按钮 -->
+                        <div class="top"><img src="../Images/btn-top.png" alt="置顶按钮"></div>
+                        <!-- 简介 -->
+                        <div class="briefIntroduction"></div>
+                        <textarea class="content"></textarea>
+                        <!-- 非岛主视角，点击关注按钮 -->
+                        <div class="concern">
+                            <div class="starToConcern"><img src="../Images/starToConcern.png"></div>
+                            <div class="btn_concern">+ 关注</div>
+                        </div>
+                        <!-- 小图钉 -->
+                        <div class="pushpin"></div>
+                    </div>
+                    <!-- 发布动态按钮 -->
+                    <div class="btn_public"></div>
+                    <!-- 发布录音按钮 -->
+                    <div class="btn_audio"></div>
+                </div>
+            </div>
+            <!-- 心灵岛头部相关信息end -->
+
+            <!-- 心灵岛 侧边相关信息 start -->
+            <div class="brand">
+                <!-- 岛名 -->
+                <div class="name"></div>
+                <!-- 岛民 -->
+                <div class="people"></div>
+            </div>
+            <!-- 心灵岛 侧边相关信息 end -->
+
+            <!-- 岛的信息动态 start-->
+            <ul class="dynamicMessage"></ul>
+            <!-- 岛的信息动态 end-->
+
+            <!-- 心灵岛未发布动态 准备区start -->
+            <div class="prepare">
+                <span class="icon_star"></span><span class="icon_jellyfish"></span>
+                <p>啊噢，这里好像还什么都没有呢，</p>
+                <p>小岛有待岛主的辛勤开发与精心照料</p>
+            </div>
+            <!-- 心灵岛未发布动态 准备区end -->
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1936 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    /*把高亮颜色设置为透明，也可以使用rgba的形式*/
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.ttf?t=1664767369142') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 心灵岛背景图 */
+
+.background {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    min-height: 100vh;
+    background: url(../Images/islandBg.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* 发布动态区域start */
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(127, 127, 127, 0.5);
+    z-index: 2;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+
+/* 发布动态 内框架 */
+
+section .insideCase {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* 发布动态 */
+
+.postUpdates {
+    position: relative;
+    width: 1024px;
+    height: 590px;
+    top: 50%;
+    margin: auto;
+    margin-top: -295px;
+    background-color: #e7ecfa;
+    border-radius: 24px;
+    padding: 15px;
+}
+
+
+/* 发布动态 左侧区域 */
+
+.postUpdates .post_left {
+    float: left;
+    width: 480px;
+    height: 560px;
+}
+
+
+/* 发布动态 左侧区域标题 */
+
+.postUpdates .post_left h1 {
+    width: 100%;
+    height: 32px;
+    font-size: 28px;
+    color: #333333;
+    padding-left: 50px;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 */
+
+.postUpdates .post_left .selectStatus {
+    position: relative;
+    width: 430px;
+    height: 244px;
+    margin: 35px auto;
+    background-color: rgba(231, 243, 250, 1);
+    border-radius: 18px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+    overflow: hidden;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 已选择心情图片 */
+
+.postUpdates .post_left .selectStatus .selectedImg {
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 222px;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -111px;
+    background-color: #fff;
+    border: 1px solid rgba(121, 121, 121, 1);
+    border-radius: 18px
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 图片集外框 */
+
+.postUpdates .post_left .selectStatus .ulCase {
+    position: absolute;
+    width: 390px;
+    height: 160px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.postUpdates .post_left .selectStatus ul {
+    display: flex;
+    position: absolute;
+    width: 2340px;
+    height: 160px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 图片外框 */
+
+.postUpdates .post_left .selectStatus ul li {
+    position: relative;
+    flex: 1;
+    margin: 0 5px;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 心情图片 */
+
+.postUpdates .post_left .selectStatus ul li img {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 心情图片提示语 */
+
+.postUpdates .post_left .selectStatus .imgTip {
+    display: none;
+    position: absolute;
+    width: 74px;
+    height: 38px;
+    top: 30px;
+    left: 70px;
+    padding-left: 5px;
+    line-height: 38px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: url(../Images/imgTip.svg) no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+
+.postUpdates .post_left .selectStatus .selectedImg .imgTip {
+    display: block;
+    left: 250px;
+    top: 50px;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 鼠标经过心情提示语出现 */
+
+.postUpdates .post_left .selectStatus ul li:hover .imgTip,
+.postUpdates .post_left .selectStatus ul li:hover .confirm_or_cancle {
+    display: block;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 心情图片取消与确定 */
+
+.postUpdates .post_left .selectStatus ul li .confirm_or_cancle {
+    display: none;
+    position: absolute;
+    width: 148px;
+    height: 156px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 18px;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.postUpdates .post_left .selectStatus ul li .confirm_or_cancle span {
+    position: absolute;
+    width: 76px;
+    height: 32px;
+    bottom: -1px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 13px;
+    line-height: 32px;
+    background-color: #d7d7d7;
+    border: 1px solid #333333;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.postUpdates .post_left .selectStatus ul li .confirm_or_cancle span:nth-child(1) {
+    left: -1px;
+}
+
+.postUpdates .post_left .selectStatus ul li .confirm_or_cancle span:nth-child(2) {
+    right: -1px;
+}
+
+.postUpdates .post_left .selectStatus ul li .confirm_or_cancle span:hover {
+    background-color: #75b1de;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 拖动轨道 */
+
+.postUpdates .post_left .selectStatus .scroll_track {
+    position: absolute;
+    width: 234px;
+    height: 3px;
+    border-radius: 3px;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(213, 212, 212);
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 拖动轨道 按钮*/
+
+.postUpdates .post_left .selectStatus .scroll_track .scroll_btn {
+    position: absolute;
+    width: 24px;
+    height: 30px;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+    padding: 10px 0;
+    z-index: 1;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 拖动轨道 按钮*/
+
+.postUpdates .post_left .selectStatus .scroll_track .scroll_btn span {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: black;
+    border-radius: 6px;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 拖动轨道 左右侧按钮 */
+
+.postUpdates .post_left .selectStatus .btnLeft,
+.postUpdates .post_left .selectStatus .btnRight {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 12px;
+    cursor: pointer;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 拖动轨道 左侧按钮 */
+
+.postUpdates .post_left .selectStatus .btnLeft {
+    left: 60px;
+    background: url(../Images/btnLeft.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 发布动态 左侧区域 选择心情动态区 拖动轨道 右侧按钮 */
+
+.postUpdates .post_left .selectStatus .btnRight {
+    right: 60px;
+    background: url(../Images/btnRight.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 发布动态 左侧区域 公开或私密，准许评论共同点*/
+
+.postUpdates .post_left .public_or_private,
+.postUpdates .post_left .comment {
+    position: relative;
+    width: 356px;
+    height: 68px;
+    margin: 25px auto;
+    background: url(../Images/select_bg.svg) no-repeat;
+    background-size: contain;
+}
+
+
+/* 发布动态 左侧区域 谁可以看，准许评论文字*/
+
+.postUpdates .post_left .text {
+    position: absolute;
+    width: 104px;
+    height: 28px;
+    top: 20px;
+    left: 20px;
+    font-size: 26px;
+    color: #333333;
+}
+
+
+/* 发布动态 左侧区域 谁可以看选择区*/
+
+.postUpdates .post_left .public_or_private .chooseArea {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    top: 19px;
+    right: 20px;
+}
+
+
+/* 发布动态 左侧区域 公开或私密*/
+
+.postUpdates .post_left .public_or_private .chooseArea .public,
+.postUpdates .post_left .public_or_private .chooseArea .private {
+    float: left;
+    width: 80px;
+    height: 100%;
+    font-size: 20px;
+    color: #555555;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+
+/* 发布动态 左侧区域 公开或私密 勾选框图片*/
+
+.postUpdates .post_left .public_or_private .chooseArea .img {
+    position: relative;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+
+/* 发布动态 分割线 */
+
+.postUpdates .postStatus_line {
+    position: absolute;
+    width: 2px;
+    height: 536px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../Images/postStatus_line.svg) no-repeat;
+}
+
+
+/* 发布动态 左侧区域 准许评论 */
+
+.postUpdates .post_left .comment .btn_select {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 30px;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 发布动态 左侧区域 准许评论图片 */
+
+.postUpdates .post_left img {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 18px;
+}
+
+
+/* 发布动态 右侧区域 */
+
+.postUpdates .post_right {
+    position: relative;
+    float: right;
+    width: 480px;
+    height: 500px;
+    top: 45px;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+
+/* 发布动态 右侧区域 标题输入框*/
+
+.postUpdates .post_right .title_input {
+    position: absolute;
+    width: 453px;
+    height: 42px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    padding: 3px 2px;
+    background-color: #f2f2f2;
+    border-radius: 18px;
+}
+
+.postUpdates .post_right .title_input input {
+    position: absolute;
+    width: 420px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+/* 发布动态 右侧区域 内容输入框*/
+
+.postUpdates .post_right .article {
+    position: absolute;
+    width: 453px;
+    height: 293px;
+    left: 50%;
+    top: 85px;
+    padding: 15px;
+    transform: translateX(-50%);
+    background-color: #f2f2f2;
+    border-radius: 18px;
+}
+
+.postUpdates .post_right .article textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+}
+
+
+/* 发布动态 右侧区域 时间*/
+
+.time {
+    position: absolute;
+    width: 180px;
+    height: 70px;
+    left: 20px;
+    bottom: 20px;
+    text-align: center;
+}
+
+
+/* 发布动态 右侧区域 具体天数*/
+
+.time .date {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 8px;
+    left: 0;
+    font-size: 48px;
+    line-height: 52px;
+}
+
+
+/* 发布动态 右侧区域 周*/
+
+.time .week {
+    position: absolute;
+    width: 72px;
+    height: 30px;
+    top: 4px;
+    right: 40px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+
+/* 发布动态 右侧区域 年月*/
+
+.time ul {
+    display: flex;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+    line-height: 30px;
+}
+
+
+/* 发布动态 右侧区域 年月*/
+
+.time ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+/* 发布动态 右侧区域 发布按钮*/
+
+.postUpdates .post_right .btn_post {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: rgba(156, 213, 255, 1);
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+
+/* 发布动态 右侧区域 关闭按钮*/
+
+.close {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -35px;
+    right: -35px;
+    background: url(../Images/close.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 发布动态 右侧区域 关闭按钮鼠标经过变色*/
+
+.close:hover {
+    background: url(../Images/close_hover.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 发布动态区域end */
+
+
+/* 发布录音区域 start */
+
+.audio {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(127, 127, 127, 0.5);
+    z-index: 2;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+
+/* 发布录音区域 内框架 */
+
+.audio .audioInsideCase {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* 发布录音区域 内部 */
+
+.audioInside {
+    position: relative;
+    width: 784px;
+    height: 590px;
+    margin: auto;
+    top: 50%;
+    margin-top: -295px;
+    background-color: #e7ecfa;
+    border-radius: 24px;
+    padding: 15px;
+}
+
+
+/* 发布录音区域 标题 */
+
+.audioInside h1 {
+    width: 682px;
+    height: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    margin: 10px auto;
+}
+
+
+/* 发布录音区域 内容区域 */
+
+.audioInside .audioContent {
+    position: relative;
+    width: 692px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 18px;
+    margin: 0 auto;
+}
+
+
+/* 发布录音区域 简单介绍 */
+
+.audioInside .audioContent .intro {
+    width: 100%;
+    height: 150px;
+    margin: 20px auto;
+    padding-top: 10px;
+}
+
+
+/* 发布录音区域 简单介绍 细节 */
+
+.audioInside .audioContent .intro p {
+    text-align: center;
+    font-size: 20px;
+    color: #272F2A;
+}
+
+
+/* 发布录音区域 发布录音 */
+
+.audioInside .audioContent .audioPublic {
+    position: relative;
+    width: 636px;
+    height: 170px;
+    margin: 0 auto;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 18px;
+}
+
+
+/* 发布录音区域 发布录音 海螺*/
+
+.audioInside .audioContent .audioPublic .audioTips {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 20px;
+    bottom: 16px;
+    transform: rotate(45deg);
+    background: url(../Images/audioTip.png) no-repeat;
+    background-size: contain;
+}
+
+.audioInside .audioContent .audioPublic .circleOne {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 6.5px;
+    background-color: #fff;
+    top: 85px;
+    left: 80px;
+}
+
+.audioInside .audioContent .audioPublic .circleTwo {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #fff;
+    top: 70px;
+    left: 100px;
+}
+
+.audioInside .audioContent .audioPublic .circleThree {
+    position: absolute;
+    width: 452px;
+    height: 126px;
+    top: 2px;
+    left: 130px;
+    background: url(../Images/circleThree.svg) no-repeat;
+    background-size: contain;
+}
+
+
+/* 发布录音区域 发布录音 提示文字*/
+
+.audioInside .audioContent .audioPublic .recordTip {
+    display: block;
+    position: absolute;
+    width: 178px;
+    height: 30px;
+    top: 52px;
+    left: 145px;
+    line-height: 25px;
+    font-size: 20px;
+    color: #7F7F7F;
+    text-align: center;
+}
+
+
+/* 发布录音区域 发布录音 录制中区域 */
+
+.audioInside .audioContent .audioPublic .recording {
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+}
+
+
+/* 发布录音区域 发布录音 录制中区域 正在录制GIF*/
+
+.audioInside .audioContent .audioPublic .recording .btn_record {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+.audioInside .audioContent .audioPublic .recording .btn_record img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 发布录音区域 发布录音 录制中区域 正在录制文字*/
+
+.audioInside .audioContent .audioPublic .recording .text_record {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    top: 25px;
+    left: 80px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.audioInside .audioContent .audioPublic .recording .text_record_click {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    top: 25px;
+    left: 80px;
+    line-height: 30px;
+    border-right: 2px solid #333333;
+    overflow: hidden;
+    animation: grow 2s steps(44) infinite normal, blink 500ms steps(44) infinite normal;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 120px;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right: 2px solid #333333;
+    }
+    to {
+        border-right: 2px solid transparent;
+    }
+}
+
+
+/* 发布录音区域 发布录音 录制中区域 正在录制计时*/
+
+.audioInside .audioContent .audioPublic .recording .time_record {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    top: 25px;
+    left: 200px;
+    line-height: 30px;
+}
+
+
+/* 发布录音区域 发布录音 录制中区域 完成录制按钮*/
+
+.audioInside .audioContent .audioPublic .recording .finish_record {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../Images/finish_record.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    top: 15px;
+    right: 0;
+}
+
+
+/* 发布录音区域 发布录音 录音预览区 */
+
+.audioInside .audioContent .audioPublic .preview {
+    display: none;
+    position: absolute;
+    width: 355px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 发布录音区域 发布录音 录音预览区 音频 */
+
+.audioInside .audioContent .audioPublic .preview audio {
+    position: absolute;
+    width: 260px;
+    height: 50px;
+    top: 5px;
+    left: 32px;
+}
+
+.audioInside .audioContent .audioPublic .preview audio::-webkit-media-controls-panel {
+    background: #b7dbcc;
+}
+
+
+/* 发布录音区域 发布录音 录音预览区 播放音频*/
+
+.audioInside .audioContent .audioPublic .preview .play_audio {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 36px;
+    background: url(../Images/play_audio.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* 发布录音区域 发布录音 录音预览区 取消音频*/
+
+.audioInside .audioContent .audioPublic .preview .cancle_audio {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 12px;
+    background: url(../Images/cancle_audio.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 发布录音区域 发布录音 录音预览区 完成音频*/
+
+
+/* 发布录音区域 添加语音 */
+
+.audioInside .audioContent .audioPublic .addAudio {
+    position: absolute;
+    width: 126px;
+    height: 40px;
+    right: 20px;
+    top: 115px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 500;
+    color: #333333;
+    background-color: #d3f9fe;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+
+/* 发布录音区域 发布时间 */
+
+.audioInside .audioContent .time {
+    left: 40px;
+    bottom: 35px;
+}
+
+
+/* 发布录音区域 发布按钮 */
+
+.audioInside .audioContent .putOnTheBeach {
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    bottom: 40px;
+    right: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: #FFFFFF;
+    background-color: rgba(156, 213, 255, 1);
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+
+/* 发布录音区域 end */
+
+
+/* 中间区域 */
+
+.centerArea {
+    position: relative;
+    width: 1200px;
+    padding-top: 120px;
+    margin: 0 auto;
+}
+
+
+/* 返回上一页 */
+
+.centerArea .backTo {
+    position: fixed;
+    width: 135px;
+    height: 160px;
+    top: 116px;
+    left: 50%;
+    transform: translateX(-730px);
+}
+
+.centerArea .backTo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 心灵岛头部相关信息 start */
+
+.centerArea .islandMessage {
+    width: 100%;
+    height: 240px;
+}
+
+
+/* 心灵岛头部相关信息 左侧图片外框 */
+
+.centerArea .img {
+    position: fixed;
+    width: 270px;
+    height: 240px;
+}
+
+
+/* 心灵岛头部相关信息 左侧图片 */
+
+.centerArea .img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 心灵岛头部相关信息 右侧详情信息 */
+
+.centerArea .islandMessage .detail {
+    position: relative;
+    float: right;
+    width: 900px;
+    height: 100%;
+}
+
+
+/* 心灵岛头部相关信息 岛的简介 */
+
+.centerArea .islandMessage .detail .briefIntroduction {
+    position: absolute;
+    width: 600px;
+    height: 40px;
+    top: 10px;
+    left: 55px;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+
+/* 岛名，简介标题 */
+
+.centerArea .islandMessage .detail .briefIntroduction span:nth-child(1) {
+    float: left;
+    width: 72px;
+    height: 40px;
+}
+
+
+/* 岛名，简介内容 */
+
+.centerArea .islandMessage .detail .briefIntroduction span:nth-child(2) {
+    float: left;
+    width: 500px;
+    height: 40px;
+    overflow: hidden;
+}
+
+
+/* 心灵岛头部相关信息 置顶动态 */
+
+.centerArea .islandMessage .detail .islandTrends {
+    position: relative;
+    width: 854px;
+    height: 170px;
+    background-color: rgb(255, 254, 241);
+    border: none;
+    border-radius: 18px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+}
+
+
+/* 心灵岛头部相关信息 置顶动态 置顶按钮 */
+
+.centerArea .islandMessage .detail .islandTrends .top {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    left: 8px;
+}
+
+
+/* 心灵岛头部相关信息 置顶动态 置顶按钮 */
+
+.centerArea .islandMessage .detail .islandTrends .top img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 心灵岛头部相关信息 输入文本内容 */
+
+.centerArea .islandMessage .detail .islandTrends textarea {
+    position: absolute;
+    width: 650px;
+    height: 100px;
+    top: 50px;
+    left: 55px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: none;
+    resize: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    cursor: default;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 3px;
+    cursor: default;
+}
+
+
+/* 心灵岛头部相关信息 发布动态按钮 */
+
+.centerArea .islandMessage .detail .btn_public {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 52px;
+    top: 30px;
+    right: 97px;
+    background: url(../Images/btn_public.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 心灵岛头部相关信息 发布录音按钮 */
+
+.centerArea .islandMessage .detail .btn_audio {
+    display: none;
+    position: absolute;
+    width: 36px;
+    height: 52px;
+    top: 92px;
+    right: 100px;
+    background: url(../Images/btn_audio.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 心灵岛头部相关信息 小钉子*/
+
+.centerArea .islandMessage .detail .pushpin {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    right: 0;
+    top: -23px;
+    background: url(../Images/pushpin.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 心灵岛头部相关信息 关注岛主按钮 */
+
+.centerArea .islandMessage .detail .concern {
+    display: none;
+    position: absolute;
+    width: 136px;
+    height: 60px;
+    top: 108px;
+    right: 10px;
+}
+
+
+/* 心灵岛头部相关信息 关注岛主按钮 星标图 */
+
+.centerArea .islandMessage .detail .concern .starToConcern {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 4px;
+    left: 0;
+}
+
+
+/* 心灵岛头部相关信息 关注岛主按钮 星标图 */
+
+.centerArea .islandMessage .detail .concern .starToConcern img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 心灵岛头部相关信息 关注岛主按钮 点击关注按钮 */
+
+.centerArea .islandMessage .detail .concern .btn_concern {
+    position: absolute;
+    width: 78px;
+    height: 38px;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    background-color: #6299ef;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+/* 心灵岛头部相关信息 end */
+
+
+/* 心灵岛 左侧牌子显示相关信息start */
+
+.brand {
+    position: fixed;
+    width: 340px;
+    height: 340px;
+    background: url(../Images/brand.png) no-repeat;
+    background-size: contain;
+    top: 415px;
+    left: 55%;
+    transform: translateX(-800px);
+}
+
+
+/* 心灵岛 左侧牌子 岛名，岛民数量 */
+
+.brand .name,
+.brand .people {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 130px;
+    height: 20px;
+    top: 80px;
+    left: 114px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+/* 心灵岛 左侧牌子 岛民数量 */
+
+.brand .people {
+    top: 108px;
+    left: 118px;
+}
+
+
+/* 心灵岛 左侧牌子 岛名 */
+
+.brand .name span:nth-child(1) {
+    max-width: 108px;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* 心灵岛 左侧牌子 岛名 */
+
+.brand .name span:nth-child(2) {
+    width: 18px;
+    height: 100%;
+}
+
+
+/* 心灵岛 左侧牌子显示相关信息end */
+
+
+/* 心灵岛 论坛发布 */
+
+.centerArea ul {
+    position: relative;
+    width: 1000px;
+    left: 182px;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容*/
+
+.centerArea ul li {
+    position: relative;
+    width: 100%;
+    min-height: 240px;
+    padding-bottom: 50px;
+}
+
+
+/* 心灵岛 论坛发布 左侧时间轴 */
+
+.centerArea ul li .list {
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    top: 0;
+    left: 48px;
+}
+
+
+/* 心灵岛 论坛发布 左侧时间轴 小圆点*/
+
+.centerArea ul li .list .list_dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 5px;
+    background: url(../Images/list_dot.svg) no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+
+/* 心灵岛 论坛发布 左侧时间轴 时间轴*/
+
+.centerArea ul li .list .list_line {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 15px;
+    background: #d7d7d7;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 顶部*/
+
+.centerArea ul li .topMessage {
+    width: 500px;
+    height: 20px;
+    margin-left: 115px;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 顶部时间与id*/
+
+.centerArea ul li .topMessage .publicTime,
+.centerArea ul li .topMessage .id {
+    float: left;
+    width: 200px;
+    height: 100%;
+    font-size: 18px;
+    color: #7F7F7F;
+    line-height: 20px;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部 */
+
+.centerArea ul li .message {
+    position: relative;
+    width: 854px;
+    height: auto;
+    min-height: 190px;
+    left: 115px;
+    top: 10px;
+    padding-bottom: 20px;
+    background-color: rgb(255, 254, 241);
+    border: none;
+    border-radius: 18px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部标题 */
+
+.centerArea ul li .message h2 {
+    height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-left: 50px;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 */
+
+.centerArea .message .more {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 ul外框 */
+
+.centerArea .message .more .UlCase {
+    display: none;
+    position: absolute;
+    width: 854px;
+    height: 190px;
+    top: -10px;
+    right: -20px;
+    border-radius: 18px;
+    background-color: rgba(170, 170, 170, 0.501960784313725);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 确认取消框 */
+
+.centerArea .message .more .UlCase .caseTips {
+    display: none;
+    position: absolute;
+    width: 443px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(121, 121, 121, 1);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 确认取消框 提示 */
+
+.centerArea .message .more .UlCase .caseTips h1 {
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    margin: 20px auto 10px;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 确认取消框 文字*/
+
+.centerArea .message .more .UlCase .caseTips h2 {
+    width: 100%;
+    height: 30px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 确认取消框 按钮外框*/
+
+.centerArea .message .more .UlCase .caseTips .buttonSet {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    margin-top: 23px;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 确认取消框 按钮*/
+
+.centerArea .message .more .UlCase .caseTips .buttonSet span {
+    flex: 1;
+    text-align: center;
+    line-height: 55px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #8080FF;
+    border-top: 1px solid rgba(121, 121, 121, 1);
+    cursor: pointer;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 确认取消框 取消按钮 */
+
+.centerArea .message .more .UlCase .caseTips .buttonSet span:nth-child(1) {
+    border-right: 1px solid rgba(121, 121, 121, 1);
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 确认取消框 按钮鼠标经过背景改变 */
+
+.centerArea .message .more .UlCase .caseTips .buttonSet span:hover {
+    background-color: #ebe9e6;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 ul */
+
+.centerArea .message .more .UlCase .btnCase {
+    position: absolute;
+    width: 128px;
+    height: 108px;
+    top: 40px;
+    right: 40px;
+    left: 668px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 18px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+    overflow: hidden;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 置顶与删除 */
+
+.centerArea .message .more .UlCase .btnCase li {
+    width: 100%;
+    height: 54px;
+    min-height: 54px;
+    line-height: 54px;
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部点击更多按钮 置顶与删除 鼠标经过显示  */
+
+.centerArea .message .more .UlCase .btnCase li:hover {
+    background-color: rgb(220, 215, 215);
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部左下角海洋动物图标 */
+
+.centerArea ul li .message .icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: -20px;
+    top: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部图标图片 */
+
+.centerArea ul li .message img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域*/
+
+.centerArea ul li .message textarea {
+    width: 740px;
+    height: 100px;
+    line-height: 20px;
+    margin: 8px auto;
+    display: -webkit-box;
+    outline: none;
+    background: none;
+    border: none;
+    resize: none;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 点击评论按钮*/
+
+.centerArea ul li .message .btn_comment {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    right: 90px;
+    top: 138px;
+    background: url(../Images/comment.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 点击拥抱按钮*/
+
+.centerArea ul li .message .btn_hug {
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    right: 30px;
+    top: 138px;
+    cursor: pointer;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 点击拥抱按钮图片*/
+
+.centerArea ul li .message .btn_hug img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 点赞数 */
+
+.centerArea ul li .message .btn_hug .countLove {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    right: -35px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    color: #94988e;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 评论区*/
+
+.centerArea ul li .message .commentArea {
+    display: none;
+    position: relative;
+    width: 800px;
+    margin: 60px auto 0;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 评论区 分割线*/
+
+.centerArea ul li .message .commentArea .line {
+    position: absolute;
+    width: 780px;
+    height: 2px;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/dashed_line.svg) repeat-x;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 评论区 发送区域*/
+
+.centerArea ul li .message .commentArea .send {
+    position: relative;
+    width: 800px;
+    height: 78px;
+    top: 6px;
+    margin: 0 auto;
+    padding: 3px 2px;
+    background-color: rgba(242, 242, 242, 1);
+    border: 2px solid rgba(184, 224, 254, 1);
+    border-radius: 18px;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 评论区 发送区域 输入框*/
+
+.centerArea ul li .message .commentArea input {
+    position: absolute;
+    width: 86%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    font-size: 20px;
+    color: #333333;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+
+/* 心灵岛 论坛发布 右侧内容 中部文本区域 评论区 发送区域 发送按钮*/
+
+.centerArea ul li .message .commentArea .btn_send {
+    position: absolute;
+    width: 75px;
+    height: 40px;
+    top: 19px;
+    right: 35px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: rgba(89, 180, 246, 1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* 心灵岛评论区 start */
+
+.centerArea .comments {
+    width: 800px;
+    min-height: 120px;
+    margin-top: 10px;
+}
+
+
+/* 心灵岛评论区 一级评论 岛的id */
+
+.centerArea .comments .islandId {
+    width: 800px;
+    height: 30px;
+    font-size: 24px;
+    color: #333333;
+    line-height: 30px;
+}
+
+
+/* 心灵岛评论区 一级评论框 */
+
+.centerArea .comments .commentPoint {
+    position: relative;
+    width: 800px;
+    height: auto;
+    min-height: 90px;
+    padding-top: 10px;
+    background-color: rgba(217, 236, 239, 1);
+    border-radius: 18px;
+}
+
+
+/* 心灵岛评论区 一级评论 评论内容 */
+
+.centerArea .comments .commentPoint span {
+    display: block;
+    width: 710px;
+    height: 70px;
+    margin-left: 25px;
+    border-radius: 12px;
+}
+
+
+/* 心灵岛评论区 一级评论 点击回复按钮 */
+
+.centerArea .comments .commentPoint .btn_reply {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 26px;
+    right: 18px;
+    background: url(../Images/comment.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.centerArea .comments .commentPoint .nextComment {
+    display: none;
+    width: 100%;
+    height: 70px;
+    font-size: 14px;
+}
+
+.centerArea .comments .commentPoint .nextComment .nextId {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+.centerArea .comments .commentPoint .nextComment p {
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 20px;
+    border-radius: 12px;
+}
+
+
+/* 心灵岛评论区 end */
+
+
+/* 心灵岛 未发布动态 start */
+
+.prepare {
+    display: none;
+    position: relative;
+    width: 854px;
+    height: 190px;
+    margin: 50px auto;
+    margin-left: 232px;
+    background-color: rgba(255, 254, 241, 1);
+    border-radius: 18px;
+    padding-top: 50px;
+    transform: translateX(60px);
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+}
+
+
+/* 心灵岛 未发布动态 海星 */
+
+.prepare .icon_star {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top: -25px;
+    left: -25px;
+    background: url(../Images/star.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 心灵岛 未发布动态 水母 */
+
+.prepare .icon_jellyfish {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    right: -25px;
+    bottom: -25px;
+    background: url(../Images/jellyfish.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 心灵岛 未发布动态 提示文字 */
+
+.prepare p {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 30px;
+    text-align: center;
+    color: #555555;
+}
+
+
+/* 心灵岛 未发布动态 end */
+
+
+/* 海螺之声 start */
+
+.centerArea .conch {
+    display: none;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* 海螺图片外框 */
+
+.centerArea .conch .bubbles .pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 0;
+}
+
+
+/* 海螺图片 */
+
+.centerArea .conch img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 海螺 */
+
+.conchOne {
+    top: 300px;
+    left: 90px;
+}
+
+
+/* 海螺 */
+
+.conchTwo {
+    top: 375px;
+    left: 250px;
+}
+
+
+/* 海螺 */
+
+.conchThree {
+    top: 320px;
+    right: 30px;
+}
+
+
+/* 海螺 */
+
+.conchFour {
+    top: 470px;
+    right: 70px;
+}
+
+
+/* 海螺上泡泡 */
+
+.conch .bubbles {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -93px;
+    right: -55px;
+    background: url(../Images/bubble.png) no-repeat;
+    background-size: contain;
+}
+
+.conch:hover .bubbles {
+    display: block;
+}
+
+
+/* 海螺上泡泡 音频*/
+
+.conch .bubbles audio {
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    top: -20px;
+    left: -30px;
+    border: none;
+}
+
+
+/* 海螺上泡泡 音频播放*/
+
+.conch .bubbles .bubblesAudio {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 14px;
+    left: 30px;
+}
+
+.conch .bubbles .bubblesAudio img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 海螺之声 end */

@@ -1,0 +1,149 @@
+body {
+    -webkit-tap-highlight-color: transparent;
+    /*把高亮颜色设置为透明，也可以使用rgba的形式*/
+}
+
+.part1 .introduce.show {
+    animation: up1 .9s .5s ease forwards;
+}
+
+.part1 .bottom h1.show {
+    animation: up2 1.2s .6s ease forwards;
+}
+
+.part1 .welc.show {
+    animation: right1 .6s .6s cubic-bezier(1, -0.98, 0, 1.9) forwards;
+}
+
+
+/* 首页加载动画 */
+
+.part1 .left .image.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.part1 .left .image:nth-child(2) {
+    transition-delay: .5s;
+}
+
+.part1 .left .image:nth-child(3) {
+    transition-delay: .8s;
+}
+
+
+/* 页面加载效果 */
+
+@keyframes up1 {
+    0% {
+        /* transform: ; */
+        transform: translate(10px, 330px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(10px, 250px);
+        opacity: 1;
+    }
+}
+
+@keyframes up2 {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes right1 {
+    0% {
+        opacity: 0;
+        transform: translate(100px, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 30px);
+    }
+}
+
+@keyframes dis {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    /* 0%{
+        opacity: 0;
+    } */
+    100% {
+        opacity: 1;
+    }
+}
+
+.disappear {
+    animation: dis .3s linear .6s forwards!important;
+}
+
+.appear {
+    animation: appear .3s ease 0 forwards!important;
+}
+
+
+/* 淡出效果 */
+
+@keyframes fadeIn {
+    0% {
+        z-index: 0;
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    100% {
+        z-index: 2;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        z-index: 2;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        z-index: 0;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.part2 .brief>ul>li.fadeIn {
+    animation: fadeIn .3s .5S ease forwards;
+}
+
+.part2 .brief>ul>li.fadeOut {
+    animation: fadeOut .7s ease forwards;
+}
+
+.part2 .brief .imgBox li.fadeIn {
+    opacity: 1;
+}
+
+.part2 .brief .imgBox li.fadeOut {
+    opacity: 0;
+}
+
+
+/* .part2 .brief .imgBox li.fadeIn{
+    animation: fadeIn .3s .5S  ease forwards;
+}
+.part2 .brief .imgBox li.fadeOut{
+    animation: fadeOut .7s ease forwards;
+
+} */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <script src="../JavaScript/common.js"></script>
+    <script src="../JavaScript/login.js"></script>
+
+</head>
+
+<body>
+    <!-- 登录背景图片 -->
+    <div class="background">
+        <!-- 登录板块start -->
+        <section>
+            <!-- 登录左侧部分start -->
+            <div class="login_left">
+                <!-- 登录大标题 -->
+                <div class="title">
+                    <span>登录</span>
+                </div>
+                <!-- 账号 -->
+                <div class="account">
+                    <input type="text" value="帐号" class="input_account">
+                </div>
+                <!-- 密码 -->
+                <div class="password">
+                    <input type="text" value="密码" class="input">
+                    <input type="password" class="input_password">
+                    <!-- 眼睛字体图标 -->
+                    <i class="input_off"></i>
+                </div>
+                <div class="loginTip"></div>
+                <!-- 关于登录 -->
+                <div class="aboutLogin">
+                    <div class="autoLogin"><input type="checkbox" checked="checked"> <span>自动登录</span></div>
+                    <span class="forgetPassword">忘记密码?</span>
+                </div>
+                <!-- 用户管理协议 -->
+                <p>
+                    <input type="checkbox" checked="checked">
+                    <span>生成即表示同意</span>
+                    <span><a href="javascript:;">《用户管理协议》</a></span>
+                </p>
+                <!-- 登录按钮 -->
+                <div class="btn_login">
+                    <span>确认登录</span>
+                </div>
+            </div>
+            <!-- 登录左侧部分end -->
+            <!-- 登录右侧部分start -->
+            <div class="login_right">
+                <h1>进入小窝!</h1>
+                <!-- 实线 -->
+                <div class="solid_line"><img src="../Images/login_line1.svg" alt="实线"></div>
+                <p>点击登录</p>
+                <p>进入您的个人账号</p>
+                <p>即可解锁更多网页定制功能</p>
+                <p>了解更多相关资讯</p>
+                <p>获取个人服务</p>
+                <!-- 虚线 -->
+                <div class="dashed_line"><img src="../Images/login_line2.svg" alt="虚线"></div>
+                <p class="first_account"><span>第一次使用/没有账号</span><i class="iconfont">&#xe617;</i></p>
+                <!-- 注册账号按钮 -->
+                <div class="btn_regist">
+                    <a href="../HTML/regist.html">
+                        <img src="../Images/btn_regist.png" alt="边框"> <span>注册账号</span>
+                    </a>
+                </div>
+            </div>
+            <!-- 登录右侧部分end -->
+        </section>
+        <!-- 登录板块end-->
+    </div>
+</body>
+
+</html>

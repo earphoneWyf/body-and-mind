@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1125574",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "6940836",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "14930485",
+      "name": "Down向下 (35)",
+      "font_class": "Downxiangxia35",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "17719876",
+      "name": "单指左滑",
+      "font_class": "danzhizuohua",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    },
+    {
+      "icon_id": "17730558",
+      "name": "新手指引",
+      "font_class": "xinshouzhiyin",
+      "unicode": "e77c",
+      "unicode_decimal": 59260
+    },
+    {
+      "icon_id": "18170373",
+      "name": "眼睛,查看,看,瞳",
+      "font_class": "visible",
+      "unicode": "e9ae",
+      "unicode_decimal": 59822
+    },
+    {
+      "icon_id": "20797369",
+      "name": "右返回",
+      "font_class": "youfanhui",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "29580364",
+      "name": "眼睛-隐藏",
+      "font_class": "yanjing-yincang",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}

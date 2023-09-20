@@ -1,0 +1,519 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+    vertical-align: baseline;
+    color: #333;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    /*把高亮颜色设置为透明，也可以使用rgba的形式*/
+}
+
+.wrapper {
+    width: 1450px;
+}
+
+
+/* 侧边栏 */
+
+.tab {
+    width: 12%;
+    padding: 20px 20px;
+}
+
+.tab>ul>li {
+    height: 70px;
+}
+
+.tab>ul>li.curr {
+    background-color: #9ec7f5;
+}
+
+.tab li a {
+    line-height: 70px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #7f7f7f;
+    transition: background-color .3s ease;
+}
+
+.tab li.curr a {
+    color: #fff;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 65%);
+}
+
+.contWrap {
+    width: 84%;
+    padding: 40px;
+}
+
+.rankList {
+    display: flex;
+}
+
+.rankList li {
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    width: 172px;
+    height: 45px;
+    padding: 0 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(170, 170, 170, 35%);
+}
+
+.rankList li.active {
+    background-color: rgb(51, 51, 51);
+}
+
+.rankList li.active i {
+    background-image: url(../Images/u1815.png);
+}
+
+.rankList li.active span {
+    color: #fff;
+}
+
+.rankList li>i {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+    background-image: url(../Images/u70.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.rankList li span {
+    font-size: 18px;
+    line-height: 45px;
+}
+
+.desc {
+    padding: 20px;
+    padding-right: 40px;
+    margin-top: 20px;
+    width: 100%;
+    height: 130px;
+}
+
+.tips {
+    display: flex;
+}
+
+.suitable {
+    padding-left: 20px;
+    margin-right: 90px;
+}
+
+.desc p,
+.suitable p,
+.tips p {
+    font-size: 24px;
+}
+
+b {
+    font-weight: bold;
+}
+
+.rankUl {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rankUl .image {
+    position: relative;
+    width: 130px;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.rankUl .image .icon {
+    width: 35px;
+    height: 35px;
+    right: 0px;
+    top: 0;
+    position: absolute;
+    display: block;
+}
+
+.rankUl li>.data {
+    margin-left: 20px;
+}
+
+.rankUl .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.rankUl li {
+    display: flex;
+    margin: 12px 0;
+}
+
+.rankUl .list {
+    width: 355px;
+    height: 600px;
+    padding: 10px 0 0px 20px;
+    border-radius: 20px;
+    background-color: rgba(251, 233, 205, 1);
+}
+
+.rankUl .list ul>div {
+    width: 100%;
+    height: 505px;
+    overflow: hidden;
+    border-radius: 15px;
+    overflow: auto;
+}
+
+
+/* 文字样式 */
+
+.rankUl .list>.name,
+.rankUl .list>span {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.rankUl li>.data>.name {
+    height: 56px;
+    line-height: 27px;
+    font-size: 20px;
+}
+
+.rankUl .type {
+    /* color: #7f7f7f; */
+    font-weight: bold;
+}
+
+.rankUl .data span {
+    color: #7f7f7f;
+    font-size: 18px;
+}
+
+.rankUl .data .data {
+    color: #D9001B;
+}
+
+
+/* 饮食百科书 start */
+
+.book {
+    width: 93%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+/* 百科书列表 */
+
+.groupList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+
+/* 百科书列表 每一个小类 */
+
+.groupList li {
+    width: auto;
+    height: 100%;
+    margin: 0 5px;
+    padding: 0 4px;
+    font-weight: 700;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333333;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 18%);
+    cursor: pointer;
+}
+
+
+/* 百科书列表 每一个小类(当前点击的) */
+
+.groupList li.current {
+    width: auto;
+    height: 100%;
+    margin: 0 5px;
+    padding: 0 4px;
+    font-weight: 700;
+    border-radius: 8px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 18%);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+/* 百科书列表 专题摘要 */
+
+.summary {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 18%);
+}
+
+
+/* 百科书列表 专题摘要 标题*/
+
+.summary h1 {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #333333;
+    text-shadow: none;
+}
+
+
+/* 百科书列表 专题摘要 内容*/
+
+.summary .summaryContent {
+    width: 100%;
+    height: 120px;
+    font-size: 20px;
+    line-height: 30px;
+    overflow-y: scroll;
+}
+
+
+/* 百科书列 视频区域 */
+
+.videoArea {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    margin-top: 30px;
+    border-radius: 24px;
+    background-color: hwb(215deg 83% 5%);
+}
+
+
+/* 百科书 初始视频列表 */
+
+.videoArea .videos {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+
+/* 百科书 初始视频列表 每一个视频*/
+
+.videoArea .videos li {
+    position: relative;
+    width: 255px;
+    height: 240px;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.videoArea .videos li img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+}
+
+.videoArea .videos li:hover img {
+    transform: scale(1.1);
+}
+
+.videoArea .videos li .action {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../Images/action.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 百科书 初始视频列表 每一个视频标题*/
+
+.videoArea .videos li .videoTitle {
+    position: absolute;
+    width: 100%;
+    height: 72px;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 22px;
+    line-height: 36px;
+    padding: 0 10px;
+}
+
+
+/* 百科书 点击放大视频区 */
+
+.videoArea .scaleVideo {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 560px;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* 百科书 点击放大视频区 视频展示区*/
+
+.videoArea .scaleVideo .video {
+    position: absolute;
+    width: 800px;
+    height: 520px;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(60, 47, 47);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.videoArea .scaleVideo .video video {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+
+/* 百科书 点击放大视频区 关闭视频展示区按钮*/
+
+.videoArea .scaleVideo .closeVideo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 760px;
+    top: 30px;
+    background: url(../Images/close.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* 百科书 点击放大视频区 右侧视频列表*/
+
+.videoArea .scaleVideo .videoList {
+    position: absolute;
+    width: 270px;
+    max-height: 540px;
+    top: 10px;
+    right: 20px;
+    padding: 8px;
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+
+/* 百科书 点击放大视频区 右侧视频列表*/
+
+.videoArea .scaleVideo .videoList li {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    margin: 22px 0;
+    background-color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+/* 百科书 点击放大视频区 右侧视频列表 图片*/
+
+.videoArea .scaleVideo .videoList li .img {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    top: 5px;
+    left: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.videoArea .scaleVideo .videoList li .action {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../Images/action.png) no-repeat;
+    background-size: contain;
+}
+
+
+/* 鼠标经过放大图片 */
+
+.videoArea .scaleVideo .videoList li .img:hover img {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+/* 百科书 点击放大视频区 右侧视频列表 图片*/
+
+.videoArea .scaleVideo .videoList li .img img {
+    position: absolute;
+    width: 120%;
+    height: 146%;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+}
+
+
+/* 百科书 点击放大视频区 右侧视频列表 视频标题*/
+
+.videoArea .scaleVideo .videoList li .videoTitle {
+    position: absolute;
+    width: 105px;
+    height: 60px;
+    right: 8px;
+    top: 25px;
+    font-size: 15px;
+    color: #333333;
+}
+
+
+/* 饮食百科书 end */

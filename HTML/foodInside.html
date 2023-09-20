@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>饮食详情页</title>
+    <link rel="stylesheet" href="../CSS/diet.css">
+    <link rel="stylesheet" href="../CSS/foodInside.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="tab">
+            <ul>
+                <li><a href="./diet.html">食物数据库</a></li>
+                <li class="curr"><a href="JavaScript:;">食物排行榜</a></li>
+                <li><a href="JavaScript:;">饮食百科书</a></li>
+            </ul>
+        </div>
+        <div class="contWrap">
+            <div class="content"></div>
+            <div class="content active cont1">
+                <ul class="rankList">
+                    <li data-list1="1" data-list2="2" data-list3="6" data-listName1="谷类及制品" data-listName2="薯类、淀粉及制品" data-listName3="水果类及制品"><i class="icon"></i><span>低热量排行榜</span></li>
+                    <li data-list1="12" data-list2="10" data-list3="3" data-listName1="鱼虾蟹贝类" data-listName2="乳类及制品" data-listName3="干豆类及制品"><i class="icon"></i><span>高蛋白排行榜</span></li>
+                    <li data-list1="4" data-list2="5" data-list3="6" data-listName1="蔬菜类及制品" data-listName2="菌藻类" data-listName3="水果类及制品"><i class="icon"></i><span>高纤维排行榜</span></li>
+                    <li data-list1="10" data-list2="12" data-list3="9" data-listName1="乳类及制品" data-listName2="鱼虾蟹贝类" data-listName3="禽肉类及制品"><i class="icon"></i></i><span>高钙排行榜</span></li>
+                </ul>
+                <div class="desc">
+                    <p id="desc"><b id="title">食物的热量:</b><span>即食物所能提供的能量，就是“卡”，亦称卡路里。测量一份食物所提供的卡路里数，就是把这份食物放在容百器里燃烧，然后测量产生的热量。而热量近似就是人体能利用的热能，提高人体运动新陈代谢生长发育的能源。</span></p>
+                </div>
+                <div class="tips">
+                    <div class="suitable">
+                        <p><b>使用人群：</b><span id="suitable">减肥人士、体重管理人士、肥胖症患者等</span></p>
+                    </div>
+                    <div>
+                        <p><b>tip：</b><span>排名越前的食物可以越优先考虑~</span></p>
+                    </div>
+                </div>
+                <div class="rankUl">
+                    <div class="list">
+                        <p class="name"></p>
+                        <span>TopList</span>
+                        <ul>
+                            <div>
+
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <p class="name"></p>
+                        <span>TopList</span>
+                        <ul>
+                            <div>
+
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <p class="name"></p>
+                        <span>TopList</span>
+                        <ul>
+                            <div>
+
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 饮食百科书 -->
+            <div class="content cont2 book">
+                <!-- 饮食类列表 -->
+                <ul class="groupList"></ul>
+                <!-- 专题摘要 -->
+                <div class="summary">
+                    <h1>专题摘要</h1>
+                    <div class="summaryContent"></div>
+                </div>
+                <!-- 播放视频区域 -->
+                <div class="videoArea">
+                    <ul class="videos"></ul>
+                    <div class="scaleVideo">
+                        <div class="video"></div>
+                        <ul class="videoList"></ul>
+                        <div class="closeVideo"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../JavaScript/common.js"></script>
+    <script src="../JavaScript/GETAJAX.js"></script>
+    <!-- <script src="../JavaScript/fun.js"></script> -->
+    <script src="../JavaScript/foodInside.js"></script>
+</body>
+
+</html>

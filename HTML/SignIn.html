@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册成功</title>
+    <link rel="stylesheet" href="../CSS/SignIn.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../JavaScript/SignIn.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sign_box">
+            <!-- 左侧框 -->
+            <div class="lbox">
+                <div class="IDbox">
+                    <p>您的帐号id是：</p>
+                    <h1>xxxxxxx</h1>
+                </div>
+                <div class="tips">
+                    <p>tips：帐号id将是您在本网站的唯一通行证</p>
+                    <p>请务必牢记，做好保存</p>
+                </div>
+                <div class="welcom">
+                    <p>恭喜你已完成注册！</p>
+                    <p>可解锁本网站的全部功能啦！</p>
+                </div>
+                <!-- 链接登录页 -->
+                <div class="lbtn"><a href="javascript:;">开始体验</a></div>
+            </div>
+            <!-- 右侧框 -->
+
+            <div class="rbox">
+                <div class="titleTip">
+                    <p>下面几步可提升您的帐号安全等级与使用体验<i class="icon"></i></p>
+                    <!-- 链主页 -->
+                    <a href="../HTML/index.html">跳过</a>
+                </div>
+                <!-- 密保区 -->
+                <div class="protect">
+                    <div class="quest">
+                        <div class="tip">
+                            <b>STEP 1</b>
+                            <span>选择密保问题</span>
+                        </div>
+                        <div class="input">
+                            <i class="iconfont">&#xe66b;</i>
+                            <p class="check">您的生日是?</p>
+                            <ul class="options">
+                                <li>
+                                    <p>您的生日是?</p>
+                                </li>
+                                <li>
+                                    <p>您的母校是?</p>
+                                </li>
+                                <li>
+                                    <p>q1</p>
+                                </li>
+                                <li>
+                                    <p>q2</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ans">
+                        <div class="tip">
+                            <b>STEP 2</b>
+                            <span>请输入答案</span>
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="答案">
+                        </div>
+                    </div>
+                </div>
+                <!-- 爱好标签区 -->
+                <div class="labelbox">
+                    <div class="tip">
+                        <b>STEP 3</b>
+                        <span>请选择您感兴趣的标签</span>
+                    </div>
+                    <ul class="labelList">
+                        <li><i class="iconfont unselect">&#xe6ed;</i><i class="iconfont select">&#xe661;</i><span>标签名字</span></li>
+                        <li><i class="iconfont unselect">&#xe6ed;</i><i class="iconfont select">&#xe661;</i><span>标签名字</span></li>
+                        <li><i class="iconfont unselect">&#xe6ed;</i><i class="iconfont select">&#xe661;</i><span>标签名字</span></li>
+                        <li><i class="iconfont unselect">&#xe6ed;</i><i class="iconfont select">&#xe661;</i><span>标签名字</span></li>
+                        <li><i class="iconfont unselect">&#xe6ed;</i><i class="iconfont select">&#xe661;</i><span>标签名字</span></li>
+                        <li><i class="iconfont unselect">&#xe6ed;</i><i class="iconfont select">&#xe661;</i><span>标签名字</span></li>
+                    </ul>
+                </div>
+                <!-- 保存 -->
+                <div class="save">
+                    <div class="tip">
+                        <b>STEP 4</b>
+                        <span>最后一步保存设置！</span>
+                    </div>
+                    <div class="rbtn"><span>保存修改</span></div>
+                </div>
+                <h3>后续亦可在<b>设置</b>处进行修改</h3>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const proInput = document.querySelector('.rbox .protect .input'),
+            optList = document.querySelectorAll('.rbox .options>li'),
+            check = document.querySelector('.rbox .protect .check'),
+            selectBox = document.querySelectorAll('.rbox .labelList .iconfont');
+
+        proInput.addEventListener('click', () => {
+                proInput.classList.toggle('active');
+            })
+            // 显示已选密保内容
+        for (let i = 0; i < optList.length; i++) {
+            optList[i].addEventListener('click', function() {
+                check.innerHTML = this.querySelector('p').innerHTML;
+            });
+        }
+        // 选中标签
+        for (let i = 0; i < selectBox.length; i++) {
+            selectBox[i].addEventListener('click', function() {
+                this.parentNode.classList.toggle('sele');
+            })
+        }
+    </script>
+</body>
+
+</html>

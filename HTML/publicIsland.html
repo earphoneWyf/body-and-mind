@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公共岛</title>
+    <link rel="stylesheet" href="../CSS/publicIsland.css">
+    <script src="../JavaScript/common.js"></script>
+    <script src="../JavaScript/publicIsland.js"></script>
+</head>
+
+<body>
+    <!-- 背景图 -->
+    <div class="background">
+        <!-- 获取随机信件遮罩层 -->
+        <div class="getLetter">
+            <div class="mailsContent">
+                <div class="insideCase"></div>
+                <!-- 对随机信进行回复 start-->
+                <div class="replyRandomLetter">
+                    <div class="head"><span>回复给：</span><span>XXXXXX</span></div>
+                    <div class="content">
+                        <div class="startData">
+                            <p>尝试写信为Ta解忧吧~</p>
+                            <p>每一份善意的回复，都将成为治愈彼此的良药</p>
+                        </div>
+                        <div class="replyArticle"><textarea></textarea></div>
+                        <div class="sendTip">
+                            <h1>已寄出</h1>
+                            <p>“赠人玫瑰 手有余香</p>
+                            <p>互帮互助 彼此治愈”</p>
+                            <div class="know">知道了</div>
+                        </div>
+                        <div class="btn_send">
+                            <div class="img"></div>
+                            <span>寄出</span>
+                        </div>
+                        <div class="letter"></div>
+                    </div>
+                </div>
+                <!-- 对随机信进行回复 end-->
+                <!-- 获取下一封随机信 -->
+                <div class="next"></div>
+                <!-- 关闭按钮 -->
+                <div class="replyClose"></div>
+            </div>
+        </div>
+        <div class="backTo">
+            <a href="../HTML/Island.html"><img src="../Images/back.png" alt="返回按钮"></a>
+        </div>
+        <!-- tab切换栏 start -->
+        <div class="tab">
+            <!-- 切换栏左侧头部按钮点击切换 -->
+            <div class="tabHead">
+                <div class="currentClick"></div>
+                <ul>
+                    <li class="current">
+                        <div class="img"><img src="../Images/reliefOfWorries.png" alt="解忧小铺"></div>
+                        <p>解忧小铺</p>
+                    </li>
+                    <li>
+                        <div class="img"><img src="../Images/chatRoom.png" alt="温暖小窝"></div>
+                        <p>温暖小窝</p>
+                    </li>
+                    <li>
+                        <div class="img"><img src="../Images/flip.png" alt="趣味翻翻"></div>
+                        <p>趣味翻翻</p>
+                    </li>
+                    <li>
+                        <div class="img"><img src="../Images/game.png" alt="解压游戏"></div>
+                        <p>解压游戏</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 切换栏内容 -->
+            <div class="tabBody">
+                <!-- 解忧小铺内容 -->
+                <section class="reliefOfWorries">
+                    <div class="left">
+                        <!-- 小铺信箱 -->
+                        <div class="publicMailbox">
+                            <div class="picture"></div>
+                            <span class="title">小铺信箱</span>
+                            <div class="line"></div>
+                            <!-- 刷新信封按钮 -->
+                            <div class="btn_flush"></div>
+                            <div class="flushTip">点击刷新信件，更新随机信件</div>
+                            <ul class="letter letterSet">
+                                <li><img src="../Images/envelopeClose.png">
+                                    <div class="envelopeOpen">
+                                        <div class="envelopeBehind"></div>
+                                        <div class="envelopeFront"></div>
+                                        <div class="envelopeLetter"></div>
+                                    </div>
+                                </li>
+                                <li><img src="../Images/envelopeClose.png">
+                                    <div class="envelopeOpen">
+                                        <div class="envelopeBehind"></div>
+                                        <div class="envelopeFront"></div>
+                                        <div class="envelopeLetter"></div>
+                                    </div>
+                                </li>
+                                <li><img src="../Images/envelopeClose.png">
+                                    <div class="envelopeOpen">
+                                        <div class="envelopeBehind"></div>
+                                        <div class="envelopeFront"></div>
+                                        <div class="envelopeLetter"></div>
+                                    </div>
+                                </li>
+                                <li><img src="../Images/envelopeClose.png">
+                                    <div class="envelopeOpen">
+                                        <div class="envelopeBehind"></div>
+                                        <div class="envelopeFront"></div>
+                                        <div class="envelopeLetter"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 私密信箱 -->
+                        <div class="privateMailbox">
+                            <div class="picture"></div>
+                            <span class="title">私密信箱</span>
+                            <div class="line"></div>
+                            <!-- 回信 -->
+                            <div class="receipt">
+                                <span>我の信件往来</span>
+                                <div class="pic"></div>
+                            </div>
+                            <!-- 写信 -->
+                            <div class="write">
+                                <span>我想写信解忧</span>
+                                <div class="pic"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <!-- 写信，回信头部 -->
+                        <div class="top">
+                            <span>便笺</span><span></span>
+                        </div>
+                        <!-- 信件内容 -->
+                        <div class="bottom">
+                            <!-- 信件原始 -->
+                            <div class="articleStart">
+                                <div class="snailTip"></div>
+                                <p>这里还什么都没有噢</p>
+                                <p>快快点击</p>
+                                <p>左边信箱试试吧~</p>
+                            </div>
+                            <!-- 信件内容 -->
+                            <article class="receiptArticle">
+                                <div class="articleTop">
+                                    <span>已寄有回</span><span>已寄未回</span>
+                                    <div class="currentUnderline"></div>
+                                </div>
+                                <!-- 寄出已回 -->
+                                <ul class="tabReply replied"></ul>
+                                <!-- 寄出未回 -->
+                                <ul class="tabReply notReply"></ul>
+                            </article>
+                            <article class="writeArticle"><textarea></textarea></article>
+                            <!-- 寄信成功提示 -->
+                            <div class="successTip">
+                                <h1>已寄出</h1>
+                                <p>“ 忧愁随信去，好运自然来</p>
+                                <p>愿你被世界温柔以待 ”</p>
+                                <div class="know">知道了</div>
+                            </div>
+                            <!-- 左侧寄出按钮 -->
+                            <div class="btn_left">
+                                <div class="img"></div>
+                                <span>寄出</span>
+                            </div>
+                            <div class="lastOne">&lt;查看上一封</div>
+                            <div class="nextOne">查看下一封&gt;</div>
+                            <!-- 右侧信件 -->
+                            <div class="rightLetter"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 温暖小窝 -->
+                <section>
+                    <div class="chat">
+                        <div class="leftBtn btn"></div>
+                        <div class="rightBtn btn"></div>
+                        <div class="top">
+                            <h1>小窝聊天房</h1>
+                            <div id="setRoom"><span>创建</span></div>
+                        </div>
+                        <div class="roomwrap">
+                            <div class="roomContainer">
+                                <div class="roomList">
+                                </div>
+                                <div class="endPage">
+                                    <div class="endtip">
+                                        <h6>小窝有话说：</h6>
+                                        <p>这位小主，全都翻完了欸</p>
+                                        <p>再怎么找也没有啦</p>
+                                        <p class="gap">没有感兴趣的话题吗？</p>
+                                        <p>不如点击右上角</p>
+                                        <p>【创建】试试吧~</p>
+                                        <p>将有机会遇见合拍的TA（们）！</p>
+                                    </div>
+                                    <div class="snailEnd"></div>
+                                </div>
+                            </div>
+                            <!--创建房间 弹出层 -->
+                            <div class="setroom hidden">
+                                <div class="box">
+                                    <h3>STEP 1 请输入聊天室主题</h3>
+                                    <div class="inputWrap">
+                                        <input type="text" id="themeInput">
+                                    </div>
+                                    <h3>STEP 2 请自定义聊天室编号</h3>
+                                    <div class="inputWrap">
+                                        <input type="text" id="roomIdInput">
+                                        <div class="randomBtn"></div>
+                                    </div>
+                                    <div class="infoBox">
+                                        <div id="finished"><span>完成</span></div>
+                                        <div class="snail">
+                                            <div class="tip">
+                                                <h4>小窝tips：</h4>
+                                                <p>主题越清晰越能吸引来更多小伙伴噢<br>祝您聊的开心~</p>
+                                            </div>
+                                            <div class="icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 聊天界面 -->
+                        <div class="chatView hidden">
+                            <div class="topT">
+                                <h5>小窝聊天房</h5>
+                                <!-- 开麦区 -->
+                                <audio id="localVideo" muted autoplay playsinline></audio>
+                                <div class="return"><span>返回</span></div>
+                            </div>
+                            <div class="inner">
+                                <div class="roomInfo">
+                                    <div class="chatTheme"><span>聊天主题：</span><span id="chatTheme"></span></div>
+                                    <div class="roomId"><span>房间编号：</span><span id="rID"></span></div>
+                                </div>
+                                <div class="view">
+                                    <div class="sendBox">
+                                        <input type="text" id="sendIpt">
+                                        <button id="send"><span>发送</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 温暖小窝end -->
+
+                <!-- 随即激励start -->
+                <section class="inspirt">
+                    <h1>快来点击卡片，翻开看看有什么趣味秘笈吧~</h1>
+                    <ul>
+                        <li>
+                            <div class="liInside"></div>
+                        </li>
+                        <li>
+                            <div class="liInside"></div>
+                        </li>
+                        <li>
+                            <div class="liInside"></div>
+                        </li>
+                        <li>
+                            <div class="liInside"></div>
+                        </li>
+                        <li>
+                            <div class="liInside"></div>
+                        </li>
+                        <li>
+                            <div class="liInside"></div>
+                        </li>
+                    </ul>
+
+                    <!-- 随机激励内容展示区 -->
+                    <div class="showArea">
+                        <!-- 小蜗牛 -->
+                        <div class="snail">
+                            <div class="inspirtTip"><span></span></div>
+                        </div>
+                        <!-- 随机激励的内容 -->
+                        <div class="content"></div>
+                        <div class="btn_agree">有意思</div>
+                        <div class="btn_disagree">不满意</div>
+                    </div>
+                </section>
+                <!-- 随机激励end -->
+
+                <!-- 解压小游戏start -->
+                <section class="game">
+                    <!-- 选择游戏区域 -->
+                    <ul class="chooseGame">
+                        <li>
+                            <span>解</span><span>压</span><span>游</span><span>戏</span><span>任</span><span>你</span><span>玩</span>
+                        </li>
+                        <li>
+                            <img src="../Images/game_two.png" alt="吹气球">
+                            <span>压</span><span>力</span><span>气</span><span>球</span><span>消</span>
+                        </li>
+                        <li>
+                            <img src="../Images/game_three.png" alt="打地鼠">
+                            <span>一</span><span>起</span><span>打</span><span>地</span><span>鼠</span>
+
+                        </li>
+                        <li>
+                            <img src="../Images/game_four.png" alt="放烟花">
+                            <span>亲</span><span>临</span><span>烟</span><span>花</span><span>秀</span>
+
+                        </li>
+                    </ul>
+                    <!-- 游戏区域start -->
+                    <div class="gameArea">
+                        <!-- 打地鼠区域 start -->
+                        <div class="mouseArea">
+                            <div class="gameBtn">
+                                <button>start</button>
+                                <button>end</button>
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+                            <div class="item">
+                                <img class="hole" src="../Images/hole.png" alt="地洞">
+                                <img class="mouse" src="" alt="老鼠">
+                                <img class="boom" src="../Images/boom.png" alt="boom">
+                                <img class="holeHover" src="../Images/holeHover.png" alt="地洞">
+                            </div>
+
+                        </div>
+                        <!-- 打地鼠区域 end-->
+
+                        <!-- 放烟花区域 start -->
+                        <div class="fireworkArea">
+                            <button>自动播放</button>
+                            <audio src="../audio/fireworks.wav" class="fireworksAudio" loop></audio>
+                        </div>
+                        <!-- 放烟花区域 end -->
+
+                        <!-- 充气球区域start -->
+                        <div class="balloonArea">
+                            <div class="inflatable">
+                                <div class="inflatablePress"></div>
+                                <div class="inflatableBody">
+                                    <div class="inflatableBodyFront"></div>
+                                    <div class="inflatableBodyBehind"></div>
+                                </div>
+                            </div>
+                            <div class="balloon">
+                                <img src="../Images/balloon_yellow.svg" alt="气球">
+                            </div>
+                            <div class="balloon_boom"></div>
+                        </div>
+                        <!-- 充气球区域end-->
+                    </div>
+                    <!-- 游戏区域end-->
+                </section>
+                <!-- 解压小游戏end -->
+            </div>
+        </div>
+        <!-- tab切换栏 end -->
+    </div>
+    <script src="../JavaScript/link.js"></script>
+    <script src="../JavaScript/chatRoom.js"></script>
+    <script src="../JavaScript/adapter-latest.js"></script>
+
+</body>
+
+</html>

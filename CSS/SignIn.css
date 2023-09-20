@@ -1,0 +1,434 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font: inherit;
+    vertical-align: baseline;
+    color: #333;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    /*把高亮颜色设置为透明，也可以使用rgba的形式*/
+}
+
+body {
+    background: url(../Images/background.jpg) no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 外容器 */
+
+.sign_box {
+    width: 1010px;
+    height: 100%;
+    margin: 60px auto;
+    display: flex;
+}
+
+
+/* 左侧框 */
+
+.sign_box .lbox {
+    transform: translateX(30px);
+    overflow: hidden;
+    margin-top: 65px;
+    width: 473px;
+    height: 500px;
+    background-color: rgba(134, 216, 251, 1);
+    border-radius: 74px;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 25%);
+}
+
+
+/* 显示ID部分 */
+
+.sign_box .lbox .IDbox {
+    width: 100%;
+    height: 150px;
+    padding: 25px 50px 0;
+}
+
+.sign_box .IDbox p {
+    font-size: 26px;
+}
+
+.sign_box .IDbox h1 {
+    font-weight: bold;
+    font-size: 74px;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* 提示部分等文字区 */
+
+.sign_box .lbox .tips {
+    height: 70px;
+    padding: 15px 0;
+}
+
+.sign_box .lbox .tips p {
+    text-align: center;
+    font-size: 21px;
+    color: #7f7f7f;
+}
+
+.sign_box .lbox .welcom p {
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    color: #f8d2a7;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 65%);
+    font-weight: bold;
+    font-family: SimSun;
+}
+
+.sign_box .lbox .welcom {
+    padding: 30px 0 20px 0;
+}
+
+
+/* 左按钮 */
+
+.sign_box .lbox .lbtn {
+    position: relative;
+    transform: translateY(28px);
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 74px;
+    background-color: #fff;
+    border: solid 10px rgb(83 160 209);
+    box-shadow: 2px 3px 3px rgb(51 51 51 / 22%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.sign_box .lbox .lbtn:active,
+.sign_box .rbox .rbtn:active {
+    top: 3px;
+    transition: all .3s cubic-bezier(.31, 3.4, .29, -.15);
+    box-shadow: 4px 4px 5px rgb(51 51 51 / 48%);
+}
+
+.sign_box .lbox .lbtn a,
+.sign_box .rbox .rbtn span {
+    display: inline-block;
+    width: 100%;
+    font-size: 34px;
+    line-height: 64px;
+    font-weight: bold;
+    color: #1C93BC;
+    text-align: center;
+}
+
+.sign_box .lbox .lbtn a {
+    line-height: 58px;
+}
+
+
+/* 右侧框 */
+
+.sign_box .rbox {
+    width: 565px;
+    height: 570px;
+    border-radius: 74px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 4px 4px 6px rgb(0 0 0 / 30%);
+}
+
+.sign_box .rbox .titleTip {
+    display: flex;
+    transform: translateY(-40px);
+    width: 100%;
+    height: 30px;
+    padding: 0 40px;
+}
+
+.sign_box .rbox .titleTip p {
+    margin-right: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sign_box .rbox .titleTip>a {
+    transform: translateY(-2px);
+    font-size: 21px;
+}
+
+
+/* 密保区 */
+
+.sign_box .rbox .protect {
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+
+.sign_box .rbox .protect .input {
+    position: relative;
+    width: 181px;
+    height: 57px;
+    margin-top: 20px;
+    margin-left: 70px;
+    border-radius: 24px;
+    background-color: rgba(221, 231, 244, 1);
+}
+
+.sign_box .rbox .protect .input i {
+    position: absolute;
+    right: 5px;
+    top: 17px;
+    display: inline-block;
+    color: #7f7f7f;
+    font-size: 26px;
+    transition: all .3s ease;
+}
+
+
+/* 显示选择层 */
+
+.sign_box .rbox .protect .input.active {
+    border-radius: 24px 24px 0 0px;
+}
+
+.sign_box .rbox .protect .input.active i {
+    transform: rotate(180deg);
+}
+
+.sign_box .rbox .protect .check,
+.sign_box .rbox .ans input::-webkit-input-placeholder {
+    font-size: 20px;
+    color: #7f7f7f;
+    line-height: 57px;
+    transform: translateX(20px);
+}
+
+
+/* 选中显示 */
+
+.sign_box .rbox .protect .check {
+    position: absolute;
+}
+
+.sign_box .rbox .quest .input {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* 选中选择层动画 */
+
+.sign_box .rbox .quest .input.active .options {
+    opacity: 1;
+}
+
+.sign_box .rbox .options {
+    opacity: 0;
+    transition: all .3s ease;
+    overflow: hidden;
+    transform: translateY(56px);
+    position: absolute;
+    width: 100%;
+    padding-top: 15px;
+    border-radius: 0px 0px 24px 24px;
+    cursor: pointer;
+    background-color: rgba(221, 231, 244, 1);
+}
+
+.sign_box .rbox .options>li {
+    position: relative;
+    width: 100%;
+    height: 0;
+    transition: all .3s ease;
+}
+
+.quest .input.active .options>li {
+    height: 35px;
+    transition: all .3s ease;
+}
+
+.sign_box .rbox .quest .input.active .options>li:last-child {
+    height: 40px;
+}
+
+
+/* 选择动画 */
+
+.sign_box .rbox .options>li:hover {
+    background-color: rgba(177, 220, 231, 0.5);
+}
+
+.sign_box .rbox .options>li:hover p {
+    font-size: 20px;
+    color: #7f7f7f;
+}
+
+
+/* 选择样式 */
+
+.sign_box .rbox .options>li>p {
+    line-height: 30px;
+    text-align: center;
+    color: #aaaaaa;
+    transition: all .3s ease;
+}
+
+
+/* placeholder样式 */
+
+.sign_box .rbox .ans input::-webkit-input-placeholder {
+    transform: translateX(0px);
+}
+
+.sign_box .rbox .protect .ans .input {
+    transform: translateX(-20px);
+}
+
+.sign_box .rbox .protect .ans input {
+    width: 150px;
+    height: 100%;
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.sign_box .rbox .protect .ans input:focus {
+    outline: none;
+}
+
+.sign_box .rbox .protect .ans .tip {
+    padding-left: 25px;
+}
+
+.sign_box .rbox .tip {
+    height: 40px;
+    width: 100%;
+    padding-left: 45px;
+    font-size: 24px;
+    line-height: 40px;
+    /* background-color: #bfa; */
+}
+
+.sign_box .rbox .tip>b {
+    font-weight: bold;
+}
+
+.sign_box .rbox .tip>span {
+    color: #aaaaaa;
+    padding-left: 5px;
+}
+
+
+/* 便签区 */
+
+.sign_box .rbox .labelbox {
+    width: 100%;
+    height: 180px;
+}
+
+.sign_box .rbox .labelList {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(2, 36px);
+    grid-gap: 18px 24px;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    padding-left: 100px;
+    background-color: #fff;
+}
+
+
+/* 标签 */
+
+.sign_box .rbox .labelList li {
+    display: flex;
+    cursor: pointer;
+}
+
+.sign_box .rbox .labelList span {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 36px;
+    color: #7f7f7f;
+    font-weight: bold;
+}
+
+
+/* 图标 */
+
+.sign_box .rbox .labelList .iconfont {
+    display: inline-block;
+    transform: translateY(6px);
+    padding-right: 30px;
+    width: 26px;
+    height: 100%;
+    font-size: 26px;
+    color: #7f7f7f;
+    font-weight: bolder;
+}
+
+
+/* 选中图标 */
+
+.sign_box .rbox .labelList .select {
+    transform: translate(-3px, 3px);
+    font-size: 32px;
+    display: none;
+}
+
+
+/* 选中状态 */
+
+.sign_box .rbox .labelList li.sele .unselect {
+    display: none;
+}
+
+.sign_box .rbox .labelList li.sele .select {
+    display: inline-block;
+}
+
+
+/* 保存按钮 */
+
+.sign_box .rbox .save {
+    width: 100%;
+    height: 127px;
+}
+
+.sign_box .rbox .rbtn {
+    cursor: pointer;
+    position: relative;
+    transform: translateX(10px);
+    width: 245px;
+    height: 68px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgb(68, 147, 188);
+    border-radius: 45px;
+    box-shadow: 7px 7px 5px rgb(51 51 51 / 48%);
+}
+
+.sign_box .rbox .rbtn span {
+    color: #fff;
+}
+
+.sign_box .rbox h3 {
+    line-height: 50px;
+    text-align: center;
+    font-size: 22px;
+    color: #7f7f7f;
+}

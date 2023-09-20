@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI计算器</title>
+    <link rel="stylesheet" href="../CSS/calculator.css">
+    <script src="../JavaScript/common.js"></script>
+    <script src="../JavaScript/calculator.js"></script>
+</head>
+
+<body>
+    <!-- 中间区域 -->
+    <section>
+        <!-- 头部区域 -->
+        <div class="head">
+            <span><a href="../HTML/tool.html">健身系列小工具</a></span><span>》》</span><span>BMI计算器</span>
+        </div>
+
+
+        <!-- BMI身体质量指数 start-->
+        <div class="bodyMassIndex">
+            <header>
+                <h1>BMI身体质量指数</h1>
+                <div class="underline" style="width: 300px;"><img src="../Images/dashed_line.svg" alt="下划线"></div>
+            </header>
+            <!-- BMI介绍 -->
+            <div class="introduction">
+                <!-- 左侧图片 -->
+                <div class="img"><img src="../Images/BMI.png" alt="图片"></div>
+                <!-- 右侧介绍 -->
+                <div class="intro_right">
+                    <p><b style="font-weight: 700;">BMI：</b>[Body Mass Index] 即BMI指数，又称体质指数， 也叫身体质量指数 ，是国际最常用来量度体重与身高比例的工具，也是常用的衡量人体胖瘦程度以及是否健康的一个标准。</p>
+                    <p><b style="font-weight: 700;">适用范围：</b>18至65岁的人士。儿童、发育中的青少年、孕妇、乳母、老人及身型健硕的运动员除外。</p>
+                </div>
+            </div>
+            <div class="line"><img src="../Images/solid_line.svg" alt="分割线"></div>
+            <!-- BMI计算器 -->
+            <div class="calculator">
+                <!-- 左侧信息输入区 -->
+                <div class="left">
+                    <p>请输入您的性别、身高和体重：</p>
+                    <div class="sex">
+                        <span>性别：</span>
+                        <div class="man sexCheckbox">
+                            <div class="checkbox"><img src="../Images/checkbox_selected.svg"></div>
+                            <span>男</span>
+                            <div class="img"><img src="../Images/man.png" alt="男"></div>
+                        </div>
+                        <div class="woman sexCheckbox">
+                            <div class="checkbox"><img src="../Images/checkbox_none.svg"></div>
+                            <span>女</span>
+                            <div class="img"><img src="../Images/woman.png" alt="女"></div>
+                        </div>
+                    </div>
+                    <div class="height"><span>身高：</span><input type="text"><span>CM(厘米)</span></div>
+                    <div class="weight"><span>体重：</span><input type="text"><span>KG(公斤)</span></div>
+                    <div class="btn_compute">计算</div>
+                </div>
+                <div class="centerLine"><img src="../Images/center_dashed_line.svg" alt="中间分割线"></div>
+                <!-- 右侧展示信息区 -->
+                <div class="right">
+                    <ul>
+                        <li><span>• 您的身体质量指数为：</span><span class="Index" style="color: #D9001B;">XXX</span></li>
+                        <li><span>• 您的BMI属于：</span><span class="BMI_type" style="color: #D9001B;">XXX</span><span>BMI</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line"><img src="../Images/solid_line.svg" alt="分割线"></div>
+            <!-- 成年人身体质量指数 -->
+            <div class="aboutBMI">
+                <h3>成年人身体质量指数：</h3>
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <thead style="line-height: 30px;">
+                        <tr>
+                            <th>轻体重BMI</th>
+                            <th>健康体重BMI</th>
+                            <th>超重BMI</th>
+                            <th>肥胖BMI</th>
+                        </tr>
+                    </thead>
+                    <tbody style="line-height: 40px;">
+                        <tr>
+                            <td>BMI&lt;18.5 </td>
+                            <td>18.5≤BMI&lt;24</td>
+                            <td>24≤BMI&lt;28</td>
+                            <td>28≤BMI</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="line"><img src="../Images/solid_line.svg" alt="分割线"></div>
+            <!--更多内容-->
+            <div class="more">
+                <!-- 资料来源 -->
+                <div class="source">
+                    <h2>资料来源：</h2>
+                    <ul>
+                        <li>
+                            <a href="javascript:;">• 《中国居民膳食指南》（2007）P72——中国营养学会</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">• 《中国成年人超重和肥胖症预防控制指南》（2003年）卫生部疾病控制司</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- tips -->
+                <div class="tips">
+                    <h2>Tips:</h2>
+                    <p>BMI 身体质量指数并非衡量肥胖的唯一指标噢，仅供参考</p>
+                    <p>相比较而言，体脂率更能科学准确的衡量肥胖，体脂率详情信息以及计算可点击
+                        <a href="javascript:;">这里（体脂率计算器）</a>
+                    </p>
+                </div>
+            </div>
+            <!-- BMI身体质量指数 end-->
+        </div>
+
+        <!-- 相关推荐区域 start -->
+        <div class="recommend">
+            <header>
+                <h2><span>健身系列小工具</span><span>》》</span><span>相关推荐</span></h2>
+                <div class="underline" style="width: 250px;"><img src="../Images/dashed_line.svg" alt="下划线"></div>
+
+            </header>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <!-- 相关推荐区域 end -->
+
+
+        <!-- 文章资讯 start -->
+        <div class="articleInformation">
+            <header>
+                <h2>文章资讯</h2>
+                <div class="underline" style="width: 250px;"><img src="../Images/dashed_line.svg" alt="下划线"></div>
+            </header>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <!-- 文章资讯 end -->
+
+    </section>
+</body>
+
+</html>
